@@ -1,0 +1,72 @@
+{
+  "eval_set_id": "evalseteaec99",
+  "name": "evalseteaec99",
+  "eval_cases": [
+    {
+      "eval_id": "case8e8ab3",
+      "conversation": [
+        {
+          "invocation_id": "e-d69d0d58-a412-4228-b415-0d4087a0479b",
+          "user_content": {
+            "parts": [
+              {
+                "text": "i wanna hire a business developer. write JD for it"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The Job Description has been approved, as no hallucinations were detected."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "refiner_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-2e30822c-245c-494c-809c-d524c126a3d2",
+                        "args": {},
+                        "name": "approve_jd"
+                      },
+                      "thought_signature": "Ct0BAb4-9vuQgOVYqZvUwWLZhxaE6KUuvoSWxZeItMHpB6yDpPBJFsTax8GXc06QOBo3KVv96AAfAzB1g67tjQmr2pn4iTyl21sAFgqNXTULMaDy7Yw3PzYmeoCXFSB5hypb9hpKJ1Fr320jqZMaZwGFD-O6WkZgR7m5G_qwZ3EY5kYFBpTi7-z6nx1jWUQHYj-8mNzh7nSqquyvYAhOFvzX0UaOfI8afWRf-Hc0Acvv5cwy0eN0Pl9fuOVM48ZXNnh1UHZF0RgQ1YCbIkFEsbgRNpKJ0u4xhq97b_81MwM="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "refiner_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-2e30822c-245c-494c-809c-d524c126a3d2",
+                        "name": "approve_jd",
+                        "response": {}
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1771430547.89452
+        }
+      ],
+      "session_input": {
+        "app_name": "root_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1771519262.910293
+    }
+  ],
+  "creation_timestamp": 1771519241.8495862
+}

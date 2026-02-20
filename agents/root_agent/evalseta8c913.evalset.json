@@ -1,0 +1,215 @@
+{
+  "eval_set_id": "evalseta8c913",
+  "name": "evalseta8c913",
+  "eval_cases": [
+    {
+      "eval_id": "casea8886d",
+      "conversation": [
+        {
+          "invocation_id": "e-f938535d-3518-47dc-a772-92c904572e8d",
+          "user_content": {
+            "parts": [
+              {
+                "text": "hi"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Hello! How can I help you today?",
+                "thought_signature": "CsMBAb4-9vutTdvvMg7gXjOUMm7PDEY3abPcB1Ll5AtJE8PyDG-_qnVlIuNv939zDbGzuOSRjQJEA7bAWdOQgQgz4-F8eXGoRLbEwczyFQkfXLpokKCMIuaXkicrb6A_n46sQtYv5FWScPsBboWt0l59dKqC14gwMeQwUEZd5qVS0B5F_vGbuVCKbE3VSfduykO2wOJmPPsOZDyXKKz5dgKIoMeqDFWqPilyo07HtHYhhE95vIGz4Y61ws3WSUiAa3eeRGYb"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1771499983.686891
+        },
+        {
+          "invocation_id": "e-73d0b2c3-fdd5-46b9-9d11-d51c3f452edb",
+          "user_content": {
+            "parts": [
+              {
+                "text": "who is owner of microsoft"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1771499998.230914
+        },
+        {
+          "invocation_id": "e-9c371452-62e2-456d-8da7-6e0efc3ff37a",
+          "user_content": {
+            "parts": [
+              {
+                "text": "how to retain jobs"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                "thought_signature": "CsECAb4-9vsRWulQwNelhUDPPSFwOP-vPCzWSLks8fN-rvc6toUVY8Dlt64bJPQDz-PwWacTO0_oRQw2ER8KUa2QViPmEvK2FaNnfRBYo4sjceQIiSUSiSsLn8t94YPtQYjihI5EQ6cFHLxk6dFJCoqv34e9JP7O4ADUhY7kiUwNvp300dumO_6G6whSmuswtXVjsNpueWUkzNjvpTx3pYnlSWsLjwO0DnykVi4j9W_bz1GKlKCtspfxBl164EPriE-hLdqRZgF27rKhH_IJ3R9FEMoMYYpWQDPJx--Mmu0jfqK_rOY-2hXnzhmvvTwVJgICjGjxEwBDvU9sHU8gOMVfgBSfr0b1MaMHJmVeS4RcCYTZZuGbs9Tm4y3bM6BZ3sTHsQ2So5qgsgwdaYuHr21xpjlcI61Poc-euAUo5krWlfHa"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1771500017.109996
+        },
+        {
+          "invocation_id": "e-96ba78b2-0076-4bad-94c1-3d87ce468442",
+          "user_content": {
+            "parts": [
+              {
+                "text": "what is your scope"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "My scope is to help users generate job descriptions for various roles. I can also refine existing job descriptions. Let me know if you need me to generate any JD for any role!",
+                "thought_signature": "CqUFAb4-9vuQ_vetFjGgxfsGUppVerCjKpbna1JBo-nCvab-c6yEYmuXbSCQhEiFbBpAzJVJgT5CZN7MRr-1cK9812yLkLCFwDm_SmiqtfU1EYV3TeX5Lk_F7datigxzKpSAb2pLuQNB3ftFzXtqusf3Vf7L--yNaD59jteVqRvA7APhoQNQ7fl21a2sTK2BR9GTvL3Gkme9hOCIpu0g0JZuBjanW8Byrod2GmomsWk3K82NajtcNWGRQ5zBnHBpD63ukoeVyrVwmUIvXCd20GujlkEkL2wgSCLM34kjv2u22Gun1u3nzJ9yej6I3NgTMrQ2nSsFgGMQKbZuw4-M7yccB9EG3dYVZOuDVUtKIwIlMQJ-bP2KwtsnzZzujdVKyMqd2X8gEodFC4LsbGpGBTtlz11Xxl-hmJXjI4jo-shxaNuuhhbzbtDLylvnWm-PL_adPMhpJTzCDHJt8LsjAc7DynA4bfi_49pQxM7620o9SnSXf_hTXiwDSWzaXhpSuFvbaJOdrnrwLyCUy4SGwxC8RWFfTu1so_ZvSvZohMB5Fq6f5A43r11Cgt3iuqe2ueItN9T2yzlROeWoYJRbqvxwGtl3B-Cu0QQ5eWWVErmo-LMxetPxzmDxHG7eV459md5uQ5eS29TLeZoQD2xQHNHjt73PYnIwnQVwQj07R-hu5woCzynRv6nazKCSiMmh_6qOJBl0dxwwqKdRPS2piPRZYU2PLWlvRYQC7OUxD2aFSno9PBd1Y9veaQ-gC4ffbtKEyCWPWwiAD2irmI4e2Y_kqMEHVcgsyos0VlXDuU6YDhrH_-dYLzRsVGix_YQmb8es3oCgttPVQqqx1audDvmY6bLYZUPG8WDAey8l1975AQy7VheojBga4tNgQFAYC34pziZWbZU="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1771500027.154028
+        },
+        {
+          "invocation_id": "e-1552a46b-b87a-448d-a636-5517448dc92d",
+          "user_content": {
+            "parts": [
+              {
+                "text": "generate an image for my job post"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1771500065.004157
+        },
+        {
+          "invocation_id": "e-20fca6d3-9c68-4787-9570-2f931a9d2a58",
+          "user_content": {
+            "parts": [
+              {
+                "text": "I want to hire a Business Dev. Write me a JD"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The Job Description has been approved."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-fd6df626-c977-4042-ba9e-691452a3e41a",
+                        "args": {
+                          "agent_name": "manager_agent"
+                        },
+                        "name": "transfer_to_agent"
+                      },
+                      "thought_signature": "CokCAb4-9vsrviEUtkHhmvxCfg3F5u70e2qWMtC3Varz9iCikdenhMncdt-fKvMFUzNRkKZ4FMtOGbbPWwV6Y8RDY_wu0BgwPBYZ_tcF9lM9JnCFAZyGozEZ4ljU6bMO7eeREKhPrLflDdZbz8K5k3sGV18TkyTGfzAeqSgRBgMtyNaTMbuQo3LC-gVF69MdqTtEEXMg0_3BdIgA-O7tgXkR2AJ4reTTtJl1NZSyUHY_C-T6AHeZG9qMWapecruKb9Udg8G68dgnC9NRx75n0DMa_328RyPVHWTg47JUucVNrQWn7ZshlQZOh8VZPEFDpdcpHRPGsYkFRHwmQs4D6p7-fS2ilgx-CHlPaQ=="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-fd6df626-c977-4042-ba9e-691452a3e41a",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "refiner_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-45f1818a-64ce-480a-a9c4-4801f47a9087",
+                        "args": {},
+                        "name": "approve_jd"
+                      },
+                      "thought_signature": "CvEBAb4-9vuomhtVVL19JZ_FXKxzsfAVZAm-LivA3Ys2HdAF3-aYsNF2fKEoSA3fBnAgcb1Vp1ILsYsx-2O7H_DunYdy_yDp-Ar5x_Vn_N8mXeFk3ChkoJnxSS0RMlDJmHXFL_fpOCn5ycY0vcq5keneAMiho_wb9A39hA6v2CAlFXB6yP4AU6YIHsYl5Qzau0lhF-n0Fu2rVQmTiJvLm8lMv90hGuc1uliedFkOEbpPmpfKJJT2M7RWUH7aqSsvFhyy5YNks2geAUpO2s4Tsobl_tEVlivxqmAdCxgT5-_STHHPB1Q__cckVXPMu6hcHMnoVQ=="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "refiner_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-45f1818a-64ce-480a-a9c4-4801f47a9087",
+                        "name": "approve_jd",
+                        "response": {}
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1771500100.69382
+        }
+      ],
+      "session_input": {
+        "app_name": "root_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1771518969.5676157
+    }
+  ],
+  "creation_timestamp": 1771518952.0035155
+}

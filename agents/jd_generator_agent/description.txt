@@ -1,0 +1,5 @@
+This agent generates professional, structured, and publication-ready Job Descriptions (JDs) based on user input.
+
+It analyzes the requested job role, seniority level, and context, then produces a complete job description including responsibilities, qualifications, required skills, and company overview.
+
+Designed for HR teams, recruiters, founders, and hiring managers who need high-quality JDs quickly and consistently.

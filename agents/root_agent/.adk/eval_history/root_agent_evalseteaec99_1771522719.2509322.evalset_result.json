@@ -1,0 +1,1230 @@
+{
+  "eval_set_result_id": "root_agent_evalseteaec99_1771522719.2509322",
+  "eval_set_result_name": "root_agent_evalseteaec99_1771522719.2509322",
+  "eval_set_id": "evalseteaec99",
+  "eval_case_results": [
+    {
+      "eval_set_file": "evalseteaec99",
+      "eval_set_id": "evalseteaec99",
+      "eval_id": "case8e8ab3",
+      "final_eval_status": 2,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 1.0,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 0.0,
+          "eval_status": 2,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.6,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 0.7058823529411764,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-f9eec34f-f36f-4082-93af-70ea95223301",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "i wanna hire a business developer. write JD for it",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "The Job Description has been approved.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "root_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-9b77b90c-c68f-4b40-9441-c37c5b5cb8c0",
+                          "args": {
+                            "agent_name": "manager_agent"
+                          },
+                          "name": "transfer_to_agent",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CpcCAb4-9vuYxcQKnmC48qZqadLiFixwTQdAT7pwf18eMPPzojttdk1kv-_UhYs0P-DtTkRaFa19igHBTsLE1nuBAGcEnA2wh2unDBkQyJtI2jSp94-YMSEC3TI3uOmUeXLqNqQ-8Ds1GpmDutzZVhVDTL5FYkQuR-2HIMaZZc-4PDkovLKMCFZu_Y7uEd_JOhVp-CPESfjacrdku5pHgtWzj-VtycQpV8em33qlJTt1FlfmvUxN0qyi7bSuteBwMXGZCwmCMCmKjl62yxxWD-llK7AO9GIaU6fgVaBEqO4rXwhnJHjO-nmhOQgszaYxR0msUpwjB41BmsTGzz23fK8vdv1FEdRyiEPRQx98v6d-tjxCQelK6TPe",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "root_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-9b77b90c-c68f-4b40-9441-c37c5b5cb8c0",
+                          "name": "transfer_to_agent",
+                          "response": {
+                            "result": null
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "refiner_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-68aca696-296d-4845-aec0-78abdb93ba07",
+                          "args": {},
+                          "name": "approve_jd",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CswDAb4-9vva5Rd3iJ4uvHqepIhPiy6MkQ_WCB7zKXkzZQI4Lr1VvyKdZf8kxPJ3wb3sIObm9MolZDjaZf9d9s_Cy0aZz-iGOxBF2UDZsD4CjMdb1T3nupllyszqdCr1DlqPaXdqICJOnij61qvPI068soptRfcMjviuX5NsP4JUDauSbEKBdoqD3TdQ2kQ1MWHqZmJV8Uc7F3NCd62emGbA7DexNQOkcBJ6eWeYy1AZlxo7a8HlDq-Ahn1AJOXJNixwKmLxW4naragsdhBoJ0ZlXcaRan3j6CYbfMdwY30b5jTE4OcP0au7buoD7kcPwY_p3A98wPr8D2oAn59oc6oESl4JsGBzwBNfDAJN0FCS1s6y1CNsl8NmzooAGI35rNdlhbS5qT3HnFETnmf5o8UXkiG5yy3rfbDN1L4LvlFLic8Yv79NBtkNGyOqM9Ow3g5chvGF4A0WGTf0xo3Vi5OFIrTuRzqQGRhEq9l-FE0J7d4NVGZCTTUGWoX6kuP125J7ix2trQL2fiokBky1RuIrDcBkh6-lNkb0rT63bC0IgCqN0cvULhbs4E9Nm38W7xUhQ-l5o30FPgEGZxNkUFTcXyS3avFjubt4CN0AUA==",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "refiner_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-68aca696-296d-4845-aec0-78abdb93ba07",
+                          "name": "approve_jd",
+                          "response": {}
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1771522645.079083,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "root_agent": {
+                  "name": "root_agent",
+                  "instructions": "You are a helpful assistant that helps users generate job descriptions for various roles. You have access to a manager agent that can generate job descriptions and refines it. You have to decide when to call the manager agent based on the user query. If user is not asking for a job description, you should not call the manager agent and instead respond to the user query directly. If user is asking for a job description, you should call the manager agent to generate the job description.\n\nClassify the user query first,\n1. If its greetings or anything about JD generation process: ANSWER.\n2. If its a query to generate JD, PROCEED with sub agent i.e manager_agent.\n3. If its not relevant to our Scope, POLITELY SAY: \"Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.\"\n\nYou are NOT Supposed to respond to any query out of Scope(irrelevant queries can be of any type except greetings and jd generation query). Politely say: \"Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role\"\n\nYou are an agent. Your internal name is \"root_agent\".\n\n\nYou have a list of other agents to transfer to:\n\n\nAgent name: manager_agent\nAgent description: \n\n\nIf you are the best to answer the question according to your description,\nyou can answer it.\n\nIf another agent is better for answering the question according to its\ndescription, call `transfer_to_agent` function to transfer the question to that\nagent. When transferring, do not generate any text other than the function\ncall.\n\n**NOTE**: the only available agents for `transfer_to_agent` function are\n`manager_agent`.\n",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Transfer the question to another agent.\n\n  This tool hands off control to another agent when it's more suitable to\n  answer the user's question according to the agent's description.\n\n  Note:\n    For most use cases, you should use TransferToAgentTool instead of this\n    function directly. TransferToAgentTool provides additional enum constraints\n    that prevent LLMs from hallucinating invalid agent names.\n\n  Args:\n    agent_name: the agent name to transfer to.\n  ",
+                          "name": "transfer_to_agent",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "agent_name": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": [
+                                  "manager_agent"
+                                ],
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "agent_name"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search": null,
+                      "google_search_retrieval": null,
+                      "url_context": null
+                    }
+                  ]
+                },
+                "jd_generator_agent": {
+                  "name": "jd_generator_agent",
+                  "instructions": "You are a professional Job Description (JD) Generator Agent.\n\nYour role:\nGenerate clear, structured, and industry-standard job descriptions based on the user's request.\n\n\nWhen a user provides a job title, role, or hiring need, you must:\n\n1. Infer the industry and seniority level if not explicitly stated.\n2. Generate a complete, well-formatted Job Description.\n3. Keep the tone professional and suitable for posting on job boards.\n4. Avoid fluff. Be concise but comprehensive.\n5. Do NOT include internal reasoning or explanations.\n6. Output only the final job description.\n\nThe Job Description MUST include the following sections:\n\n- Job Title\n- Location (if not provided, guess location)\n- Employment Type (Full-time by default unless specified)\n- About the Company (any name you want, if not provided)\n- Role Overview\n- Key Responsibilities (bullet points)\n- Required Qualifications (bullet points)\n- Preferred Qualifications (bullet points, optional)\n- Skills Required\n- Compensation & Benefits (generic if not specified)\n- Equal Opportunity Statement\n\nFormatting Rules:\n- Use clean section headers.\n- Use bullet points for responsibilities and qualifications.\n- Keep sentences professional and action-oriented.\n- Do not invent company-specific confidential details.\n- If user input is minimal (e.g., \"Need a Python developer\"), intelligently expand into a full JD.\n\nIf information is missing:\n- Make reasonable professional assumptions.\n- Do not ask follow-up questions.\n- Do not mention assumptions explicitly.\n\nOutput must be ready to publish on LinkedIn, Indeed, or company website.\n\nYou are an agent. Your internal name is \"jd_generator_agent\". The description about you is \"This agent generates professional, structured, and publication-ready Job Descriptions (JDs) based on user input.\n\nIt analyzes the requested job role, seniority level, and context, then produces a complete job description including responsibilities, qualifications, required skills, and company overview.\n\nDesigned for HR teams, recruiters, founders, and hiring managers who need high-quality JDs quickly and consistently.\".",
+                  "tool_declarations": []
+                },
+                "hallucination_detector_agent": {
+                  "name": "hallucination_detector_agent",
+                  "instructions": "\n    You are a Hallucination Detection Agent.\n\nYour role:\nAnalyze a generated Job Description (JD) and determine whether it contains hallucinated, fabricated, or unsupported information.\n\nYou will receive:\n1. The original user prompt i wanna hire a business developer. write JD for it\n2. The generated Job Description i.e state['curr_jd']\n\nYour task:\nCompare the JD against the user prompt and identify whether the JD includes content that was:\n- Invented without basis in the prompt\n- Overly specific without justification\n- Factually questionable\n- Logically inconsistent\n- Company-specific details not provided in the prompt\n\nDefinition of Hallucination:\nAny detail that introduces specific facts, claims, technologies, numbers, locations, company descriptions, compensation ranges, or industry claims that were not reasonably inferable from the user prompt.\n\nAllowed Inference:\n- Reasonable expansion of job responsibilities\n- Industry-standard responsibilities\n- Generic company descriptions\n- Common skills for that role\n\nNot Allowed:\n- Specific company names\n- Specific salary numbers (unless provided)\n- Exact addresses or locations not mentioned\n- Claims about funding, market leadership, or company size\n- Unrealistic or contradictory requirements\n\nOutput Format (STRICT):\n\nHallucination Status: [YES / NO]\n\nConfidence Level: [LOW / MEDIUM / HIGH]\n\nIssues Found:\n- Bullet point explanation for each hallucination found.\n- If none found, write: \"No hallucinations detected.\"\n\nRisk Assessment:\nBrief explanation (2–4 sentences) describing the severity of the hallucination risk.\n\nImportant Rules:\n- Be objective.\n- Do not rewrite the JD.\n- Do not improve the JD.\n- Only analyze and evaluate.\n- Do not speculate beyond evidence.\n- If unsure, mark confidence as MEDIUM.\n\n    \n\nYou are an agent. Your internal name is \"hallucination_detector_agent\". The description about you is \"Hallucination Detector Agent\n\nThis agent reviews generated Job Descriptions and evaluates whether they contain fabricated, unsupported, or speculative information not grounded in the original user prompt.\n\nIt ensures reliability, factual consistency, and professional integrity by flagging hallucinated claims, overly specific assumptions, and risky fabricated details.\n\nDesigned for AI safety validation in multi-agent systems.\".",
+                  "tool_declarations": []
+                },
+                "refiner_agent": {
+                  "name": "refiner_agent",
+                  "instructions": "\n    You are a JD Refinement Agent.\n\nYour role:\nTake an already generated Job Description (JD) and improve it for clarity, readability, and professional formatting.\n\nHere's the Data:\n0. Original User Query:i wanna hire a business developer. write JD for it\n1. Current JD: state['curr_jd']\n2. Hallucination Agent Feedback: state['hallucination_detector_feedback']\n\nRules:\n0. If Hallucination Status is False, then call approve_jd tool. Otherwise follow the other steps.\n1. Keep all original facts intact — do NOT change job title, responsibilities, or qualifications.\n2. Correct grammar, punctuation, and formatting issues.\n3. Use professional, structured sections.\n4. Ensure bullet points are concise and action-oriented.\n5. Do NOT invent any new information or details.\n6. Avoid hallucinations — rely solely on the JD provided as input.\n7. Output only the refined JD text, ready for publication.\n\n\n    \n\nYou are an agent. Your internal name is \"refiner_agent\". The description about you is \"JD Refiner Agent\n\nThis agent improves clarity, readability, and formatting of Job Descriptions generated by the JD Generator Agent. \nIt preserves all original facts, does not invent new information, and ensures the JD is professional and publication-ready.\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": null,
+                          "name": "approve_jd",
+                          "parameters": null,
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search": null,
+                      "google_search_retrieval": null,
+                      "url_context": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "e-d69d0d58-a412-4228-b415-0d4087a0479b",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "i wanna hire a business developer. write JD for it",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "The Job Description has been approved, as no hallucinations were detected.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "refiner_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-2e30822c-245c-494c-809c-d524c126a3d2",
+                          "args": {},
+                          "name": "approve_jd",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "Ct0BAb4-9vuQgOVYqZvUwWLZhxaE6KUuvoSWxZeItMHpB6yDpPBJFsTax8GXc06QOBo3KVv96AAfAzB1g67tjQmr2pn4iTyl21sAFgqNXTULMaDy7Yw3PzYmeoCXFSB5hypb9hpKJ1Fr320jqZMaZwGFD-O6WkZgR7m5G_qwZ3EY5kYFBpTi7-z6nx1jWUQHYj-8mNzh7nSqquyvYAhOFvzX0UaOfI8afWRf-Hc0Acvv5cwy0eN0Pl9fuOVM48ZXNnh1UHZF0RgQ1YCbIkFEsbgRNpKJ0u4xhq97b_81MwM=",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "refiner_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-2e30822c-245c-494c-809c-d524c126a3d2",
+                          "name": "approve_jd",
+                          "response": {}
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1771430547.89452,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 1.0,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 0.0,
+              "eval_status": 2,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.6,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 0.7058823529411764,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___9e8ab5e2-7512-4f12-be14-2808ee98737c",
+      "session_details": {
+        "id": "___eval___session___9e8ab5e2-7512-4f12-be14-2808ee98737c",
+        "app_name": "root_agent",
+        "user_id": "user",
+        "state": {
+          "__llm_request_key__": "d91a97e9-40d1-4529-849d-8921b6712d5d",
+          "curr_jd": "**Job Title:** Business Development Representative\n\n**Location:** New York, NY\n\n**Employment Type:** Full-time\n\n**About the Company:**\nAt Apex Innovations, we are a fast-growing technology company dedicated to delivering cutting-edge software solutions that empower businesses to achieve their full potential. We thrive on innovation, collaboration, and a commitment to customer success. Join our dynamic team and contribute to our mission of transforming industries.\n\n**Role Overview:**\nWe are seeking a highly motivated and results-oriented Business Development Representative (BDR) to join our sales team. The BDR will be responsible for identifying, prospecting, and qualifying new business opportunities, acting as the front line of our sales process. This role involves strategic outreach, lead nurturing, and setting up initial meetings for our Account Executives, contributing directly to our revenue growth.\n\n**Key Responsibilities:**\n*   Conduct market research to identify potential clients and target markets.\n*   Initiate outbound contact with prospective customers via cold calls, emails, and social media.\n*   Qualify leads based on established criteria (BANT - Budget, Authority, Need, Timeline).\n*   Articulate Apex Innovations' value proposition to potential clients and generate interest.\n*   Schedule discovery calls and product demonstrations for Account Executives.\n*   Maintain accurate and up-to-date records of all activities and interactions in the CRM system.\n*   Collaborate closely with the sales and marketing teams to optimize lead generation strategies.\n*   Meet and exceed monthly and quarterly quotas for qualified meetings and opportunities.\n*   Stay informed about industry trends, market changes, and competitor activities.\n\n**Required Qualifications:**\n*   Bachelor's degree in Business, Marketing, Communications, or a related field.\n*   1-2 years of experience in a Business Development Representative (BDR), Sales Development Representative (SDR), or similar sales role.\n*   Proven ability to conduct effective cold outreach (calls, emails, LinkedIn).\n*   Exceptional written and verbal communication skills.\n*   Strong organizational skills and attention to detail.\n*   Proficiency with CRM software (e.g., Salesforce, HubSpot).\n*   Self-motivated, goal-oriented, and resilient.\n\n**Preferred Qualifications:**\n*   Experience in the SaaS or technology industry.\n*   Familiarity with sales engagement platforms (e.g., SalesLoft, Outreach).\n*   Demonstrated track record of exceeding sales or lead generation targets.\n*   Ability to understand complex technical concepts and articulate them simply.\n\n**Skills Required:**\n*   Lead Generation\n*   Prospecting\n*   Cold Calling\n*   Email Marketing\n*   CRM Management\n*   Communication\n*   Active Listening\n*   Time Management\n*   Resilience\n*   Negotiation Fundamentals\n\n**Compensation & Benefits:**\nApex Innovations offers a competitive base salary along with uncapped commission potential based on performance. Our comprehensive benefits package includes medical, dental, and vision insurance, 401(k) with company match, generous paid time off, and opportunities for professional development and growth.\n\n**Equal Opportunity Statement:**\nApex Innovations is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status.",
+          "hallucination_detector_feedback": "Hallucination Status: NO\n\nConfidence Level: HIGH\n\nIssues Found:\nNo hallucinations detected.\n\nRisk Assessment:\nThe JD successfully avoids hallucinating specific company details, location, or overly precise compensation and benefits information by using placeholders or generic statements. This makes the generated content safe and adaptable for the user without requiring significant corrections for factual accuracy."
+        },
+        "events": [
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "i wanna hire a business developer. write JD for it",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f9eec34f-f36f-4082-93af-70ea95223301",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "1fbe7c3a-fbcf-420d-9b60-6e9a3300b35b",
+            "timestamp": 1771522642.861807
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-9b77b90c-c68f-4b40-9441-c37c5b5cb8c0",
+                    "args": {
+                      "agent_name": "manager_agent"
+                    },
+                    "name": "transfer_to_agent",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "CpcCAb4-9vuYxcQKnmC48qZqadLiFixwTQdAT7pwf18eMPPzojttdk1kv-_UhYs0P-DtTkRaFa19igHBTsLE1nuBAGcEnA2wh2unDBkQyJtI2jSp94-YMSEC3TI3uOmUeXLqNqQ-8Ds1GpmDutzZVhVDTL5FYkQuR-2HIMaZZc-4PDkovLKMCFZu_Y7uEd_JOhVp-CPESfjacrdku5pHgtWzj-VtycQpV8em33qlJTt1FlfmvUxN0qyi7bSuteBwMXGZCwmCMCmKjl62yxxWD-llK7AO9GIaU6fgVaBEqO4rXwhnJHjO-nmhOQgszaYxR0msUpwjB41BmsTGzz23fK8vdv1FEdRyiEPRQx98v6d-tjxCQelK6TPe",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "e1108c51-a7e6-41ff-a752-cd0267ff7d37"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 21,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 543,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 543
+                }
+              ],
+              "thoughts_token_count": 54,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 618,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f9eec34f-f36f-4082-93af-70ea95223301",
+            "author": "root_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "e1108c51-a7e6-41ff-a752-cd0267ff7d37"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "4422e821-574e-4b02-861a-16c9ad4ccda2",
+            "timestamp": 1771522642.866774
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-9b77b90c-c68f-4b40-9441-c37c5b5cb8c0",
+                    "name": "transfer_to_agent",
+                    "response": {
+                      "result": null
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f9eec34f-f36f-4082-93af-70ea95223301",
+            "author": "root_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": "manager_agent",
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "7c3d8459-6baf-42f1-b244-16e896ce9047",
+            "timestamp": 1771522645.079531
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "**Job Title:** Business Development Representative\n\n**Location:** New York, NY\n\n**Employment Type:** Full-time\n\n**About the Company:**\nAt Apex Innovations, we are a fast-growing technology company dedicated to delivering cutting-edge software solutions that empower businesses to achieve their full potential. We thrive on innovation, collaboration, and a commitment to customer success. Join our dynamic team and contribute to our mission of transforming industries.\n\n**Role Overview:**\nWe are seeking a highly motivated and results-oriented Business Development Representative (BDR) to join our sales team. The BDR will be responsible for identifying, prospecting, and qualifying new business opportunities, acting as the front line of our sales process. This role involves strategic outreach, lead nurturing, and setting up initial meetings for our Account Executives, contributing directly to our revenue growth.\n\n**Key Responsibilities:**\n*   Conduct market research to identify potential clients and target markets.\n*   Initiate outbound contact with prospective customers via cold calls, emails, and social media.\n*   Qualify leads based on established criteria (BANT - Budget, Authority, Need, Timeline).\n*   Articulate Apex Innovations' value proposition to potential clients and generate interest.\n*   Schedule discovery calls and product demonstrations for Account Executives.\n*   Maintain accurate and up-to-date records of all activities and interactions in the CRM system.\n*   Collaborate closely with the sales and marketing teams to optimize lead generation strategies.\n*   Meet and exceed monthly and quarterly quotas for qualified meetings and opportunities.\n*   Stay informed about industry trends, market changes, and competitor activities.\n\n**Required Qualifications:**\n*   Bachelor's degree in Business, Marketing, Communications, or a related field.\n*   1-2 years of experience in a Business Development Representative (BDR), Sales Development Representative (SDR), or similar sales role.\n*   Proven ability to conduct effective cold outreach (calls, emails, LinkedIn).\n*   Exceptional written and verbal communication skills.\n*   Strong organizational skills and attention to detail.\n*   Proficiency with CRM software (e.g., Salesforce, HubSpot).\n*   Self-motivated, goal-oriented, and resilient.\n\n**Preferred Qualifications:**\n*   Experience in the SaaS or technology industry.\n*   Familiarity with sales engagement platforms (e.g., SalesLoft, Outreach).\n*   Demonstrated track record of exceeding sales or lead generation targets.\n*   Ability to understand complex technical concepts and articulate them simply.\n\n**Skills Required:**\n*   Lead Generation\n*   Prospecting\n*   Cold Calling\n*   Email Marketing\n*   CRM Management\n*   Communication\n*   Active Listening\n*   Time Management\n*   Resilience\n*   Negotiation Fundamentals\n\n**Compensation & Benefits:**\nApex Innovations offers a competitive base salary along with uncapped commission potential based on performance. Our comprehensive benefits package includes medical, dental, and vision insurance, 401(k) with company match, generous paid time off, and opportunities for professional development and growth.\n\n**Equal Opportunity Statement:**\nApex Innovations is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "fad59b48-a4c5-4d96-be7f-95c46700c847"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 702,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 518,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 518
+                }
+              ],
+              "thoughts_token_count": 575,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1795,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f9eec34f-f36f-4082-93af-70ea95223301",
+            "author": "jd_generator_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "fad59b48-a4c5-4d96-be7f-95c46700c847",
+                "curr_jd": "**Job Title:** Business Development Representative\n\n**Location:** New York, NY\n\n**Employment Type:** Full-time\n\n**About the Company:**\nAt Apex Innovations, we are a fast-growing technology company dedicated to delivering cutting-edge software solutions that empower businesses to achieve their full potential. We thrive on innovation, collaboration, and a commitment to customer success. Join our dynamic team and contribute to our mission of transforming industries.\n\n**Role Overview:**\nWe are seeking a highly motivated and results-oriented Business Development Representative (BDR) to join our sales team. The BDR will be responsible for identifying, prospecting, and qualifying new business opportunities, acting as the front line of our sales process. This role involves strategic outreach, lead nurturing, and setting up initial meetings for our Account Executives, contributing directly to our revenue growth.\n\n**Key Responsibilities:**\n*   Conduct market research to identify potential clients and target markets.\n*   Initiate outbound contact with prospective customers via cold calls, emails, and social media.\n*   Qualify leads based on established criteria (BANT - Budget, Authority, Need, Timeline).\n*   Articulate Apex Innovations' value proposition to potential clients and generate interest.\n*   Schedule discovery calls and product demonstrations for Account Executives.\n*   Maintain accurate and up-to-date records of all activities and interactions in the CRM system.\n*   Collaborate closely with the sales and marketing teams to optimize lead generation strategies.\n*   Meet and exceed monthly and quarterly quotas for qualified meetings and opportunities.\n*   Stay informed about industry trends, market changes, and competitor activities.\n\n**Required Qualifications:**\n*   Bachelor's degree in Business, Marketing, Communications, or a related field.\n*   1-2 years of experience in a Business Development Representative (BDR), Sales Development Representative (SDR), or similar sales role.\n*   Proven ability to conduct effective cold outreach (calls, emails, LinkedIn).\n*   Exceptional written and verbal communication skills.\n*   Strong organizational skills and attention to detail.\n*   Proficiency with CRM software (e.g., Salesforce, HubSpot).\n*   Self-motivated, goal-oriented, and resilient.\n\n**Preferred Qualifications:**\n*   Experience in the SaaS or technology industry.\n*   Familiarity with sales engagement platforms (e.g., SalesLoft, Outreach).\n*   Demonstrated track record of exceeding sales or lead generation targets.\n*   Ability to understand complex technical concepts and articulate them simply.\n\n**Skills Required:**\n*   Lead Generation\n*   Prospecting\n*   Cold Calling\n*   Email Marketing\n*   CRM Management\n*   Communication\n*   Active Listening\n*   Time Management\n*   Resilience\n*   Negotiation Fundamentals\n\n**Compensation & Benefits:**\nApex Innovations offers a competitive base salary along with uncapped commission potential based on performance. Our comprehensive benefits package includes medical, dental, and vision insurance, 401(k) with company match, generous paid time off, and opportunities for professional development and growth.\n\n**Equal Opportunity Statement:**\nApex Innovations is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status."
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "a7fb8ad0-68b3-402a-ba9d-41da0d43dce9",
+            "timestamp": 1771522645.084125
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Hallucination Status: YES\n\nConfidence Level: HIGH\n\nIssues Found:\n- The generated JD invents a specific company name (\"Apex Innovations\") and uses it throughout the document without any basis in the prompt.\n- A specific location (\"New York, NY\") is fabricated for the role.\n- The JD invents a specific industry and product focus (\"fast-growing technology company,\" \"cutting-edge software solutions,\" \"SaaS or technology industry\") that was not mentioned or implied by the user.\n- Specific examples of CRM software (\"Salesforce, HubSpot\") and sales engagement platforms (\"SalesLoft, Outreach\") are provided without prompting.\n- The compensation and benefits section includes highly specific details (e.g., \"uncapped commission potential,\" \"medical, dental, and vision insurance, 401(k) with company match, generous paid time off\") that were not requested or inferable.\n\nRisk Assessment:\nThe hallucination risk is high because the generated JD invents critical and specific company-level details such as company name, location, industry, and benefits. These fabrications make the JD unusable as-is and could lead to significant confusion or misrepresentation if used directly by the user, requiring substantial manual correction.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "012f9736-aaa7-447d-b7d5-33f4553a6ea9"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 254,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 1265,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 1265
+                }
+              ],
+              "thoughts_token_count": 942,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 2461,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f9eec34f-f36f-4082-93af-70ea95223301",
+            "author": "hallucination_detector_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "012f9736-aaa7-447d-b7d5-33f4553a6ea9",
+                "hallucination_detector_feedback": "Hallucination Status: YES\n\nConfidence Level: HIGH\n\nIssues Found:\n- The generated JD invents a specific company name (\"Apex Innovations\") and uses it throughout the document without any basis in the prompt.\n- A specific location (\"New York, NY\") is fabricated for the role.\n- The JD invents a specific industry and product focus (\"fast-growing technology company,\" \"cutting-edge software solutions,\" \"SaaS or technology industry\") that was not mentioned or implied by the user.\n- Specific examples of CRM software (\"Salesforce, HubSpot\") and sales engagement platforms (\"SalesLoft, Outreach\") are provided without prompting.\n- The compensation and benefits section includes highly specific details (e.g., \"uncapped commission potential,\" \"medical, dental, and vision insurance, 401(k) with company match, generous paid time off\") that were not requested or inferable.\n\nRisk Assessment:\nThe hallucination risk is high because the generated JD invents critical and specific company-level details such as company name, location, industry, and benefits. These fabrications make the JD unusable as-is and could lead to significant confusion or misrepresentation if used directly by the user, requiring substantial manual correction."
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "686d1fc6-f356-4f5a-8d31-b98b56340a24",
+            "timestamp": 1771522653.021773
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "**Job Title:** Business Development Representative\n\n**Employment Type:** Full-time\n\n**About the Company:**\n[Company Name] is a growing company dedicated to delivering solutions that empower businesses to achieve their full potential. We thrive on innovation, collaboration, and a commitment to customer success. Join our dynamic team and contribute to our mission.\n\n**Role Overview:**\nWe are seeking a highly motivated and results-oriented Business Development Representative (BDR) to join our sales team. The BDR will be responsible for identifying, prospecting, and qualifying new business opportunities, acting as the front line of our sales process. This role involves strategic outreach, lead nurturing, and setting up initial meetings for our Account Executives, contributing directly to our revenue growth.\n\n**Key Responsibilities:**\n*   Conduct market research to identify potential clients and target markets.\n*   Initiate outbound contact with prospective customers via cold calls, emails, and social media.\n*   Qualify leads based on established criteria (BANT - Budget, Authority, Need, Timeline).\n*   Articulate the company's value proposition to potential clients and generate interest.\n*   Schedule discovery calls and product demonstrations for Account Executives.\n*   Maintain accurate and up-to-date records of all activities and interactions in the CRM system.\n*   Collaborate closely with the sales and marketing teams to optimize lead generation strategies.\n*   Meet and exceed monthly and quarterly quotas for qualified meetings and opportunities.\n*   Stay informed about industry trends, market changes, and competitor activities.\n\n**Required Qualifications:**\n*   Bachelor's degree in Business, Marketing, Communications, or a related field.\n*   1-2 years of experience in a Business Development Representative (BDR), Sales Development Representative (SDR), or similar sales role.\n*   Proven ability to conduct effective cold outreach (calls, emails, LinkedIn).\n*   Exceptional written and verbal communication skills.\n*   Strong organizational skills and attention to detail.\n*   Proficiency with CRM software.\n*   Self-motivated, goal-oriented, and resilient.\n\n**Preferred Qualifications:**\n*   Familiarity with sales engagement platforms.\n*   Demonstrated track record of exceeding sales or lead generation targets.\n*   Ability to understand complex concepts and articulate them simply.\n\n**Skills Required:**\n*   Lead Generation\n*   Prospecting\n*   Cold Calling\n*   Email Marketing\n   *   CRM Management\n*   Communication\n*   Active Listening\n*   Time Management\n*   Resilience\n*   Negotiation Fundamentals\n\n**Compensation & Benefits:**\n[Company Name] offers a competitive compensation package, including a base salary and performance-based incentives. Our comprehensive benefits package includes opportunities for professional development and growth.\n\n**Equal Opportunity Statement:**\n[Company Name] is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status.",
+                  "thought": null,
+                  "thought_signature": "Cog_Ab4-9vvv81pk6cm_BtUocvO_sGz9s-tLg_Ltc99BayZkFCwPyRPQLC3Cu1HibAj6MbWCe-WytJoYbm2xIjMH-e0oUBmtbhsTh5R_VrhtOKy87Orip_mUuWa1E0S_hcuAxNMOKG7RdXg-9YDHDcOVD-MVWee3-Di_J9Opcl5Lc9dXHshF2nT8kAxoGFmE0cjB0LcrsPk9vOX1BbdH2R9xljW23wOD3Ccpk_jwTaZYsCOS1d_2X_XkLjFkFwLZtO_bDeqjR47-Fhe5XgKSdR1byCa9QoVxOfhA9FuaIKWmINq6QxO8d9jhMJqLeEpVEroOALqhlBPJd10DehJoPJGnlGzHy3sz97GXM4uAuvByx7e4ku9_UJp_DDIkIkBvOLsa0p1CkDZeo4nOnP3buf7-HtBWjSbAzilb4oxCZTNuhRa2uxTa0XWY0CMg5srvaU7mJaINiTcucBR4bG73I8AyMhGgVz4lj9YYeXfa-Y_Jg6Wkku5ye-uQNgNEkx_J1etVEIkwk5I57yXTo_hZJqz_xMT-QfrzSXpZNEfNJR_Txo3HTgk8Vul1hAF_RCJ7EAaRxOuHJjC4UXwKsVxis6JnVIU2bgqvGYJtxXjMXrK-ir__j7wFmMqz2A3D5lKLAnuVLCHrQtK7_Z2RnhaFL4aj0NpCY5Hofh0VoMz_Y_KgxfVYAkxQKbmtPchqiss_zHG4Z3qdScn1tpI0UR7oxkf5ycLs8voM1kPbbiHrJ5SbhwNbQJA9k7bcd_-WrY1te42Fa7qCQpSQsJtkNU2bAUs9gTsOYrtHXvGoRsuTma1XVsCDBGoGeWaAHUTMjQ9XED9cxaDE55zBM_6mtZWZ2GMyN9FzoEAeeh4x03vM5l76go56SoT75-Li4FudBr5VVSwaBhuT0Gek-UoT714jIe7byk3mzXTRjbCgCCwBBc9by0LTQIs3zLVsWGurf_HsgtxqnQxEUBlbW9BYR6769ayq68X-srxprIJtFdiXjPfG4rw3gCSjI-DB6Aaz6YIdxeOi7NkhGjcPocoz4kvTgXkRIFtk4mVI1tgdmlf4kq_Z5K2_lTPVWL1kwS6obf0XsYXIUYSFmXm_rc-WEw3HcON4ate0nPxpN0JAVDxYTj6vy_x_fNoke3qkpP0LPT0FTl0mcPM-ULVXmFgujcntXALOqPfyralHs0duPXhaxjSFgulLP4-PKQA21PRJWvVaValzG82-iWZSUFhJQPFCDoIlLAyh4bWwtiBQEz4pdVsTmdJjkSZFRtAkdujQJR5fam6-qfYgB-fg0afsTpXIYp08z8EWPXam6DMZaQs3B-EIpNE-SXs4PF2w7xI2b2REKdIbXcIS8YzisLIJ7vKxTai1sy6kDbul978ZSROuZQijWAJ6-dC8eC3PlcmXG3Rl6IRR2qZoJRNINiSbr7OZy6DgoqJHHt4AHIPLA8pVQJFo6heJWTn_Hdt-yUa0b0Kzcohg7Y2MK6-49zCfgYEWeoGWYRwuCmZgLubeJ6mOrd4MekEMcz2kmWovt3Ay2S0lOpkJrIebJMZOtukdk92xQx_-snpZ2tmVGPfuXkNyGF-e7NTlGSuHkiSsCoBQeTup9c2xOuUbAaOWt5sciahoHTn1eSUdNcJx3p69JfNaWlHhL3yxziYVZ8D20lWteScgegvxb3D_4KqlPvJq8adGenlOU20YxTgvty_-xYMTJs5VuxOz_0yFE8QXRwmx85rLzXM-INXXCKf4eWIIX6PF_NkDKq7uW7Cog5Qeo1oMuKxMZ1lytjs8pzWV_H0RGKHMqq0vt2AE-hPvg_FQHFfyFxh2eLMbuHmham_gbBnyF9NLAZoWJhKgaTi7vtlefidJZaEBd6RSM-hnewSfl-PY-bnb2ct4YNmFQQE1tNjSTJYVMxa6WgJRT6Q0j5xz6iPVA98EkiB17nrXy_GdgnAIgXOAZ1u1DOPhWYQ5n5sbmE2fpX9ee5PTZ1QPEwNx3rQYxH5Eu-sgIKZJ7djIXjC1smDWKgZ6FCKuAeCEtgb0n4GQz-kBdtLQKy0wdTVLJb5VjK5BRHGTYsNqQw3KUfWId-Np5S1C92iIBIkqa1OIrbwwICjWlPwvhdBxo6OuzX4VZM2Ze_ao3X2HjldEFCvfDq8bRd4um_52uY2rk65h_EJTvkItkryyvQPhjikgECz6lbDzySsT1MbUTCOf6yElBXGyGv_ML_JJF-DKIP8t_3UyYiAR_S19KD_C-2D-iaVUqv5vOUpm2ZCEDqASdvHglExSYOX988YUdZIdXs3EAKuX3RDF4wJqcWJ6YrYvPd1Ukt3ZB-BsJxyjuBS9pzhGxQvWSbLwBE68Ihr-e27Fbg5YrXy_SHD2SYW6z9f-JxEBay9doL5y3nEBzze-qiAR4roW_sUUuVKaRBilhlSMSvYzwNtiHxmz-TuxuRLzin8GH9WbR1-r6kEo0jV9OVy_AGumAjZtTLFirm4oNO6rlhNtbCf7hao-wa0ipUEQcJLsCD8UbOGM1CjJXYNtMab0Dn4uC5kkuTlETum16Ny0pBEjqEuNPSgTOqvQqV5gTICvyuN-BOyUv05OBgII7zXzEQ03a_iotHSQD4Ukip8ZscZw8y0GD70zADc4SFXNIY94I-fUycM2WFmSDw-hPJx8tlMxZ0P_KRmwdW91Zk_iT3fgV4B-GmI4agRXtPLe9iJUq-Kwb9hdj0WX7qicFFAZo4RAzZ571sU4S55Q3pZJkRvvmKhlzxdpIOB2_4m9bhrEEo7VPVapL-g-2bl6lTHUbWM3lCGe1QySbay0FsbBVJ4_vHIFVC8ulYGPznQ0G3UwiRspsL1dc--1m7suH6aD2FflVxx2KgoE-hMlu43fP4oznY6YxidbmkXjo7Z60i88-7TYoaHhZevfwnOTeR_dWP5Z3lyR74pauQVl1WaKXRibB5rVeQ2oGBJgU78cSUa3uVRcvZgDxWeWlI2kQSqTXZ6nkT2gf7r4iHMvLFHJPhPCeoq6WnLPVZmCBrS2VhNoJpVPT8mlmXjyrFAqVL0F1B7EU5bkCleFMhYesQxrmMrEUhZAOxFMoa1f2c8o-wBvpjQBNtehOrevbJnBkSY-_Ki_0euJJOkHMj_O2y51cp-ErAi_73h3SVVSFYKh31ltnZrYolnXOqEDW-FsSv8KsfSGBZpl2GnysmnCgUsG39FBTaL4aBOuLKBCVp4zAL6_zDD_RlGSbEGDn3XyVjR2xwXgSVuUqgRzcC_0IAipa_V5fcdb0d5bAZjOVZQZaucA3U8Wf910HZ_EQo6mD7LPuGNbmTn09nZZ6jw8f8b5NJdH-C-msgBsjtSndZwtUNmCMAUuIVRX5XDOn-1lO_Hxi80K_D2ngfFY63Gtpa-4lraiHF3_KofrmOySTZ3tLi2EBiE0ylrSbNwWyCmmEX7KZux75dq8_bnPlt4kDbwr906a4iy44dsjv80hmYH_aqMVE2M0cZTugaA4Wrj4_69YA90d37yll1pCSEjy4ck6rn4IfcyTJ6L1fHnsttw3nNNUXx4hR8QP8ZVhoHV_e0b6gRcxZkaZ6N-EqQ6Qh8P8Mv6vNOVOXMj8SEcRq5eeks3tX3I5TA_vB28W2Xnw5xKM03QsxkWTruS5EhrPR548sVWf-iJx5GEZR7MFkN5UcrjxkUgMuaOfG3BQEw2RuImXtPH6YNRKkCMKS518FDHP3wTrYxG0-PEme7358RsZs4QXD0IXEfwEiCr48me0IwiHDHjeRI3tR_si_PtQtRkx1AhFHihdS0go5x2FUvaTLTjA5Hyu7FiivCzlN96C37RBRDJ-yts0NA4VECl1LGDRBz2jQbE4KLaNaBernv_6rQ8iK3PlyXBDzlal6Y6Etjjct1uE5lbr-gT9qDVaHSlJYyVKD9RpJa5_ReWGWemttGDho8kOdlwpJBZtQ2v6PdxFxG5XQ4bxJw5O67IwLgL-R4yY0OZ4GGqn6U8WDSI9ZRAp4NlORiaIhm6VZdgk6wj6RXjAuJN2ggvKs_ibuo4NglA61qT1Yn3Eo2Q0P8pO3JpFcePwzIU_W_DBUTwhe39d13xgGtpaxnesy6NhT0PU_XFiPjOwDoTITBbvHy4sHkdM2knbdGMk506Atleyrlyq8DyIDSb94tFZ20hj_fFbKHeGezTbW8mCCUG3rmkqMiwODTa4P9o0FU4U0yCAa2CmPTmOzDvWZbriiJwbuUHxmutSn7BoYnF5ZjvStJ_nguNH5DVyeNPeHOhRs99cIi0Dz_Fe89mhP0eUVOMpvPBAy9dmLJV1cD1yr3QpnUu8X-QrICtFy71MbXFJKjnT6PxQ3zzkcsAke5GI5LPpt-wdP36NOcuxC9sPraT4mmU4FVIVvA5qPE_fhx1Rd-qD1o01wB1RSuCVcEkXxQTM63sbp2AppcVScsGRF1H4DTzOAdzKixClrwoUkDYaZwdk7KWanv7ETy_LsQXLdFOUCTeD4P5bihv33ewSnsvEgjvfZQMJMz-gTiMeZkxbKpUsa1lCe_aHl7kXJGGVlQYaK_aHgCbqImL8cXntg3AxxdcUMZmBrqrVC3CQJtTCQ43jj8_Qo1x4CfAEIcYyll6oav0Kw60Nhi1rO6vhsFtuDIe77NbPf-SYANXTID91B8ab64JeMTy2tO9b0nmTkDYn0i9w2N3AxXJSG1qvg_H7UTkOS7g08vaEg37VGZT20W_Hro-WvYL7QKIXKr5wwKYv0vCrUlgth1qfYG-_LRBCdUKO6K7bxaTdPjqE9zXOZfjh-2Pw-Oh2cCIBEeF_eFX9iwZks4r7wxFrbbbj1C1_gozZNySwXBA0FIAHVNhTWOy1jOTs6KgZa2NnsBrHy5pWNCpjmRA9W_Ml82kel45K6oL0Hp1iyFIxbQ53LE16K440VvFCw-08U5PdimCkcYQNY7LvFZ56-j0lG-3-CYLnEIz6BvWUmo6XDAdIKLs_Ic5rcVT_r9h5z9FcvhL3od9b4bbJUQ6JEBz-zKCHIN2KtFUyJdSql_3QEetazMiZQaAs3sbfBw_7lp2xQ-6HGIeiFrkwWtxDtLqXcXWC5JWVSJtkErt2_xamSgOY4cJtQB7LPiy8W0PJnGiyr7I6UKfu_RkSOeI10f-J9z4J9o1ysEicNGwi_2CFEmk20sIwTJoTuOdFtPHr1C7PFbjCKHlaJndI7SoGwOz-BY_RIFXbwFK5NYo3MV1Qj6lMIqB086siEvxO2KHOIE0Z8PNFa3DLqkU6T7n7kIUqQleMeLUdFRaaHqayQWaggCuvZnszqC2RjgkMM8fQ5puZ_FxZyYgXjpoV1wX7u-O_ExBFHEjL5UFm7X19y_xVgX3vcksOVVwj2vuttu5VR2lT1JAkozMVYNL9X4RFnkiB07tDb_Kw9yPTLiB92mpJAgkUs41xuWRSnj88C_LujTIv5eUh0_cwBoVTJIFcFrejKZXaDs4_vTsQMmZMQpdh3yThonqytm_WE-m-jNgGXjzDCfjrVeCSSJaMykDRoGiVClD5SyyvfV6a7ZAniAro7x-fVZMsZDIju8Vyc2z8KI9J5U3z60mzXwHjD2A4aTb40MEpUkv6YQRy5PNt-KuBeLz-PvnfOtuoFzTi4SsBpLiIcHeEbCALlNuBNiF-0zqo1f5cOJ9MUUYkNAYb6MapYDsCPmbR2MnEo7fyjxp9vlWXP9YjO7NImaMz2db3wQGZyhKjsHX_u21C-vTnx6XAAipXHf86FRldjD9jv9mlmndzb7xG_jXfeDJ-LnUomAedHZ2jdBla7Mwm7UhRKLgXmtG7gssSAXEgcFmIPg2ilGTfGA6n4mU8btMK8Qvk3coI-fZJAsXy7gl_MuDSkkl3bj8hV-IwMusszJlbpPwWc_Jr9iEJ8Bh_GKplfN929Gr-hpxfTpMoxIE9rfrHx2jzJI_dxVxGvI5Lg6XoBpKvNk3XxiE-m2P-1ju-hHwgJeBkUk8A841qQNwSTNi4X0x3hFhQg2iHl5gjbwi-rldKRzZRhtTB9zvCdmRGqYSKRDbxRdmu27fyp20XoAM8GEH1GnxvaAitI0KXTQYtwsIHgr_RaAUwW2UAkVdg98lOtg_sF7OpDnd4U88hi0kkWSAjFPpS3SERRh_jAkqyWsTqEq6NDKlphNHzvMUOLU6R7ixKhkuJdlJvKsMK7k4YRSX2BMEpQmeYJSV1QsaxGkk1xK86bmExfK8xPtZOCdLsqvSOwnmtf9HrNLOe8mZMZ_JbWN14DQqGLC49ihEUPxI-aoMm-6vkcVys-U2CWm0oA2D5v30L8dSRI9mlmwe3OQ0y1z5c82ksOZHewCcXi5Bf3DNE8Sz2Uzrutlz_KN525Ep4g2pzUs3Xlu8jKv20fiEVGmtQYqTKpNbV7OZIr7kZro9EWO1ZhC8lX7bdlEGClQ8d8Wt18ST6ARSjFqAGsXLMvwS6ZfPgIMlAug5njJ2lrNYkf9lxyjddvUOeGTChMVng42sVaz0YjBdbkVp_xUuZwU95-Qfs89X4WbSOzr8tM8MeGeW6gvaYlLD2js3UF_nAoLwgoVqKgPw_YGWxZHSeuPlFTM0VCZwMlmx9RiQCKAErd4GWaB8lvYMsZF7_WJDMwnrJyVf8TuyUjbVUNhxQuaAdqkFT_3DsB0ULoO8AyFpQS9UedhaFeT6kL39NqZiUMoB4l9qNn8pX-Jstnwk-6CVE5gCd_XlICCh_ugD4OeTQvEy89YcbvNukIbcS-9iR3XUMTWW0h31uIiA2eWkTBRoi-JsyWf_qcSr5skBl_rMUFizWo-GbXH3qIxVwkyYMSZ1PdbsuLXGCGnL5I-tNgBat2QDULWNhAiNW5JIbPuz83BDpzacuONfHBHZd-ZAnUkt1Ca2sD8VmGd6ccioanVW5S7tTb4vf6voRJ8oEuDRsWtoh1cmAzjIfQlhf_WEI5ZhOMCYSlht9VWE4o6qp_FGI2iMWfuOvufbBcC2K9W8n-QPo2-Hnk4juhP61TqvfFK51PDManMzCeK1tf7YYA5wbNgmDQK3Az9RkoJnceRxhwoCz91aLwlhzuDe7_dLq3r9D4pi9GqgWZBNL9X1d6JWidgYSkxfSxWF_sexD98AIdnlcI_co1JOT8O7JcSzv86AEV2WHXY6j2krsBmWorTf5eLPKf6UGxu2cs80WG0vhUZA64WLy9v3YLGmJQDESDme-sU6mcqz_0bpkZP41iF49zGztHVESo55X4YhYrbqR20v51_-fhMexn3w3nIlj_8tTXwuZK7Ct64NqdglwRiY22xsqN2QVYN0H2JvI-PNaV_YIgcbBz-qFAX09QHIXbAIZYR5XQBAXMKbnfC18POj1nc52_UicyAeiCZ3dP36DiO3C__Az0MEoWykeXfnG7sA-eI7X8e2AQvIyXkRfpWfydwAhnpeQeVJh3MWjGUKHJ2Foh-cUagZ99k3Ui27d0ut3TTPZRAtM6q6c_TU83uz58E_SiV7w2JJ5y8DAFZ6IrU_Iz3wdmrsULFM4jcN8aoZn7zb_zYvzaTI7bkPaPx7JsfZMl1xIKV4E3XN9MSgOEXv8ntbtl5W97XOIpSmHrxKpLgk6j9Azz-mM2ptLDSVvI6kH7kzUMVBFK6sy1590rd33MTMOQITd5YgxldxBQK-CcVLd9GRlEC532AKnFCV1Taf_ldW8bkI_8eDLoHXUE31A1TKdBBXOKbe6Mq7zqpA7n0tENlvs7H4MpCzVV9BtVREeUs1Pa26rXO_9HwwElTS86Lh2qMGOUU-tr7Kk0LYmAdYNw3mAqxukmyl-f-bODJfJGXv8xDrjK-aJ-52t6Qena-iOrGfAF_ijdz2WDQus1ZnNFTU0Q8VnNcGhlVnVYCh7NnkZPxmj30gXYhiWw8cjkhbeQd3IK1jYdu1akR9tby-nhijnk14zIWc0dxm9B3uzvflM-sj4WEKEEkAZkXUGlGucH3aL5CN2NY9TjCQ80L-I5U1oPurKge5cEXEdZvTPAA5TCKB8KtbGl8hgU2jI4gAx-4r0mgimufVuKVx7G8oQKuXqtdSlcBuKcbBgeZ287OoKTk3qi2t6JNgAZLBjAzEJW7morV7DyU7-Y74an0mLq5hNKFIrGlehOmGW1pBSWqDoW9h1V4cLJOGwCZANhZiiqqkZFpJT5OIIj9rZGjnE9mWOvr6QQltH3gjwoc6p0RlaWdTkjtbjkY7VtK9OyVHdrz78xd-3V3ywPYcEAGTDXBDQ1gNOwtdPeD7gr1fsCpqPqcHYE3yssR1N1CTH_iE7l9d2EZvaPuN40fV_BaVwpJowPcZoIHqf7i08hydIPthc4p0glXAh2WLYHYx3PZIt27xmRtwnqX78TzwPLnJwwDcws6muGnB1rhwWI2KysDMaSa11cKePLJuWtjOPkKqLx79w0ntpQmLxKt81lbDkPTWZyGqDHwTMM8wskEGDEXFffT5LhnPVyVYguE23vIbyU9Gqnn51GQgIYRQyo5Y1WPqZXqhBSA1wtn47_pXzjzll11jfcDZMmPBt5wp48qDB62n4Rh_i5I3KnRydBCy9KDD2YZYRS9EYas4lnRm1EA2Uo_7h0F_JYXsOBgDW_vhUU3j96CItFNeXIlIEdRffTmKY-qX2hbBL8_eLoSat3cCRy--KDYR16cW_aHdaHak5491BtZxEGTazmvDtcdE9k0lqkRQ5KmDW5a-mUqka18EN7S-3sxPG9chT3ii4l9REHg55O0tPWoF2iikIU6vh8nu6ZldeEL_V8sIghx5NqHAAZTZSzGNk9wVUlFxQmgz0YpcArBHGyp1UcgYkJqFDdmNzLtYaHsNGOtm-IvctYqoh7k0k21a8OX2VrjHBio1_qBO3l4Wy76au_e_-1fj8CypMPCcVUDApm-Sp-iroSBSNjG734SyRWLpS5PAoQMkwwp1_I_jaU8CpUX8Ue1KAnan7kDi0bZq0CiBbMUjkLVXtAV9DGJp3GJsAH3RwWi2QPmHwEoK-f02Qerf1e3ytnI-YpHEPoj_GgpLLJgmTgfCCzwJ9hJ5O0STwpEVLzFGOwtFAQRfRadKuTZwwCbAG5y5EtlVYbibvllXeJmBaoOUEHj3zPYZHFihzwt3u5RNdE79PPAaVa95f-W7OvK-AMonsuJkkUuCCbnqVZ3t23ckWArE8Xjl5dGN2hr6e4WXvqTteVEwHHmcqLzfXg_uCpKK2oWSoInHjtZVqUTlL-qj6Kr3sYOpRHN47fcbIFn71QrV8wgWniC-Ckboa5ENhcGix1t8lr_GCXTGUWpd3xFlxzLTLsvH-vnpBhBbzdn-M68LTMCLT5_e5I8bQ5efSUx8qMiRF9aU_0H9aHqykrg4Ztmjbi9p9DzSU4LkXjtCixYpH4qqjN-fxrtMsIext571U2Xk4c1uFdXPQpzn7jDQnTBIBXkirgAoGQ_eQW04jeS6STj4wBT6WKYEhPRD-cTIFDaH2Scy4s7Ddt1HmdBo9ZHpE3sSUp6HpKRIILS9XWaNCTHOxyVE5gUIZv6GX1tQ385BakjffQe-M5zknJED9kyJb6mgaxi0BL_hlivlBNURIO-Lf3XJl9B83Ew6Rw3NHcJ4ycODiYPVz-_b_SPsNzTaXFNHMpmSKn3ggPNddUiTWlKUGsc-LKDnqzsCgKY2JWq6iUO4WqWrXF8e6K4AxziDYvyU4jM1m39m_DynvqGwFj3pdumzFQxFVfAQL5qtMA0vWnllxnxpSkzKlGBe_bz5zc7AiICKzFxfCbczYg4ETXzGCL1lNEpQNpThaPm4kusKcM7OFndiT6BYNlNTlDWuevDFzuvkJWQHm4CawSe6N_TatCX97Guk_BbGKr52w7Xi9b7jQpkHpu2zlRf5dXiNaYE0DCAxgp4YADChUWB0RLtPobXYiUb3d7N-OJPs30MMVroSq4Fb0spUleq-hu3-5vKedP4_2EyZq4u2KUGihaIb4kEJXEomzsjU2JBJVwPBsoepGjSLAMvGP6luW3BNaLfnBsRN0EBVb_ZF5fEg8OrLXVa_ccTOh8AQAyYi6c8ChpkWYmch5frUL7Jd89SQ_Zwo0KYu02oLdYIcqSDyUTvXr5UX8ep0JWOdRyhT75auFXt91Wr6ib2eRHvD1k4OLGTA1lQDOyuWNGTXh6RVpTH7DxTZmYv67Wgkmu9X9f0NZwfbsqY38FREiY33P_NcKVztSdgK0wPplpZuiOMh_ycko0SaTzPfWWlDNQkx8PzAG6xFgsv-rPFlSsNcmsqHddSd5clJO-Pp08ZrqIcITeCcKQiAxW5-7VSDK2SnGj63Itoc42MU0x6aDQkQL0kl90MliteKywArnGCQM8aKkUHUq8QCl1LR48PITwuYw0pRTVYITGlAbJDskDcjCBk9cYhMrIOSp-QQtiZ_u9ho4d6et4O2lAfwQJzo8JfuIBLgnvVEz6Zdk9py-QRoMbJYKHLnvgmg1M2Pz4bBsNAV19uRyvrXE09oRXGc5lto0D5EI8yK3EhYkG9eLpUQWllrVdG4U3cDfiIlc_8vxGeO-V17JAl1SywJSf0fFqSM1PYx7XsfF1u4vzUlNtuti0CtzrgKkEWlGwbLXNBFhNP9t1EJlTu0ourtE7pjMHuTHlvTwUpqwSA9Un-d-SgKZtIrrAQCfvOr6kYXZjppMGYQkhfqJDzTo07ifuBfHZXjyirfXd2igIZ5kNpIAIEprN6ZIqjDvHOZBpddAxmhx2kMjIo6zLm9Uhmzs7IZkmo9MtHSKXZ3im2YI8CQrTjmM5tHCeLNBRpwM8KrLQb5Qc0T_4Q-0c0zAPNPJZYk1jmLz9AmDiarHFQBAX04KRe8=",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "c99771e2-b0ac-4200-b5fc-78af86b4373a"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 635,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 1362,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 1362
+                }
+              ],
+              "thoughts_token_count": 1681,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 3678,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f9eec34f-f36f-4082-93af-70ea95223301",
+            "author": "refiner_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "c99771e2-b0ac-4200-b5fc-78af86b4373a"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "8b27efc3-7f71-4b86-8a5e-143182b10132",
+            "timestamp": 1771522660.020794
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Hallucination Status: NO\n\nConfidence Level: HIGH\n\nIssues Found:\nNo hallucinations detected.\n\nRisk Assessment:\nThe JD successfully avoids hallucinating specific company details, location, or overly precise compensation and benefits information by using placeholders or generic statements. This makes the generated content safe and adaptable for the user without requiring significant corrections for factual accuracy.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "5acf60e7-d036-4fe3-bdbb-587ea896b838"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 1011
+                }
+              ],
+              "cached_content_token_count": 1011,
+              "candidates_token_count": 70,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 2167,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 2167
+                }
+              ],
+              "thoughts_token_count": 786,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 3023,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f9eec34f-f36f-4082-93af-70ea95223301",
+            "author": "hallucination_detector_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "5acf60e7-d036-4fe3-bdbb-587ea896b838",
+                "hallucination_detector_feedback": "Hallucination Status: NO\n\nConfidence Level: HIGH\n\nIssues Found:\nNo hallucinations detected.\n\nRisk Assessment:\nThe JD successfully avoids hallucinating specific company details, location, or overly precise compensation and benefits information by using placeholders or generic statements. This makes the generated content safe and adaptable for the user without requiring significant corrections for factual accuracy."
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "6fd67999-1f36-4465-bb6e-0dc8c64731b4",
+            "timestamp": 1771522671.196961
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-68aca696-296d-4845-aec0-78abdb93ba07",
+                    "args": {},
+                    "name": "approve_jd",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "CswDAb4-9vva5Rd3iJ4uvHqepIhPiy6MkQ_WCB7zKXkzZQI4Lr1VvyKdZf8kxPJ3wb3sIObm9MolZDjaZf9d9s_Cy0aZz-iGOxBF2UDZsD4CjMdb1T3nupllyszqdCr1DlqPaXdqICJOnij61qvPI068soptRfcMjviuX5NsP4JUDauSbEKBdoqD3TdQ2kQ1MWHqZmJV8Uc7F3NCd62emGbA7DexNQOkcBJ6eWeYy1AZlxo7a8HlDq-Ahn1AJOXJNixwKmLxW4naragsdhBoJ0ZlXcaRan3j6CYbfMdwY30b5jTE4OcP0au7buoD7kcPwY_p3A98wPr8D2oAn59oc6oESl4JsGBzwBNfDAJN0FCS1s6y1CNsl8NmzooAGI35rNdlhbS5qT3HnFETnmf5o8UXkiG5yy3rfbDN1L4LvlFLic8Yv79NBtkNGyOqM9Ow3g5chvGF4A0WGTf0xo3Vi5OFIrTuRzqQGRhEq9l-FE0J7d4NVGZCTTUGWoX6kuP125J7ix2trQL2fiokBky1RuIrDcBkh6-lNkb0rT63bC0IgCqN0cvULhbs4E9Nm38W7xUhQ-l5o30FPgEGZxNkUFTcXyS3avFjubt4CN0AUA==",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "f7435cc2-3f02-4ee0-aea1-2a975bb23cfd"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 10,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 2083,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 2083
+                }
+              ],
+              "thoughts_token_count": 97,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 2190,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f9eec34f-f36f-4082-93af-70ea95223301",
+            "author": "refiner_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "f7435cc2-3f02-4ee0-aea1-2a975bb23cfd"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "6afc3e50-978f-4788-bf7f-d97073a43704",
+            "timestamp": 1771522676.834339
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-68aca696-296d-4845-aec0-78abdb93ba07",
+                    "name": "approve_jd",
+                    "response": {}
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f9eec34f-f36f-4082-93af-70ea95223301",
+            "author": "refiner_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": true,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "36d182c8-d64a-4fc1-b4c5-0cb05f6acbb5",
+            "timestamp": 1771522679.133429
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "The Job Description has been approved.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "d91a97e9-40d1-4529-849d-8921b6712d5d"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 1638
+                }
+              ],
+              "cached_content_token_count": 1638,
+              "candidates_token_count": 7,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 2104,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 2104
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 2111,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f9eec34f-f36f-4082-93af-70ea95223301",
+            "author": "refiner_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "d91a97e9-40d1-4529-849d-8921b6712d5d"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "4bd9ad72-4c44-43eb-b11d-00eebf7bcd44",
+            "timestamp": 1771522679.140318
+          }
+        ],
+        "last_update_time": 1771522679.140318
+      },
+      "user_id": "user"
+    }
+  ],
+  "creation_timestamp": 1771522719.2509322
+}

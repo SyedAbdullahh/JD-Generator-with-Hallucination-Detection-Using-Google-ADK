@@ -1,0 +1,7 @@
+Hallucination Detector Agent
+
+This agent reviews generated Job Descriptions and evaluates whether they contain fabricated, unsupported, or speculative information not grounded in the original user prompt.
+
+It ensures reliability, factual consistency, and professional integrity by flagging hallucinated claims, overly specific assumptions, and risky fabricated details.
+
+Designed for AI safety validation in multi-agent systems.
