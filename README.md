@@ -1,4 +1,4 @@
-# ADK JD Generator POC
+# Job Description Generation with Hallucination Detection using Google ADK
 
 Multi-agent Job Description (JD) generation system built with Google ADK and deployable to Vertex AI Agent Engine.
 
