@@ -1,6 +1,6 @@
 from google.adk.agents import SequentialAgent, LlmAgent
-from agents.jd_generator_agent.agent import jd_generator_agent
-from agents.anti_hallucination_loop.agent import anti_hallucination_agent
+from jd_generator_agent.agent import jd_generator_agent
+from anti_hallucination_loop.agent import anti_hallucination_agent
 from google.adk.agents.invocation_context import InvocationContext
 from google.adk.events import Event
 from typing import AsyncGenerator

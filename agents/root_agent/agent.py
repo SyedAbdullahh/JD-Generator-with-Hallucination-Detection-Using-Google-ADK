@@ -1,7 +1,7 @@
 from pathlib import Path
 import sys
 from google.adk.agents import SequentialAgent, LlmAgent
-from agents.manager_agent.agent import manager_agent
+from manager_agent.agent import manager_agent
 from google.adk.agents.invocation_context import InvocationContext
 from google.adk.events import Event
 from typing import AsyncGenerator

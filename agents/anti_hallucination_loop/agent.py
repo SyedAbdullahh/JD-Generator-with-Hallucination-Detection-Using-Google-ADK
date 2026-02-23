@@ -1,6 +1,6 @@
 from google.adk.agents import LoopAgent
-from agents.hallucination_detector_agent.agent import hallucination_detector
-from agents.refiner_agent.agent import refiner_agent
+from hallucination_detector_agent.agent import hallucination_detector
+from refiner_agent.agent import refiner_agent
 
 
 anti_hallucination_agent=LoopAgent(

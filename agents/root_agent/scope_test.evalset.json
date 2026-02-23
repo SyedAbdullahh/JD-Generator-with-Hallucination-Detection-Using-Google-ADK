@@ -1,0 +1,105 @@
+{
+  "eval_set_id": "scope_test",
+  "name": "scope_test",
+  "eval_cases": [
+    {
+      "eval_id": "case5af728",
+      "conversation": [
+        {
+          "invocation_id": "e-2fad4655-071b-48e8-a346-c9efb5a1d9e1",
+          "user_content": {
+            "parts": [
+              {
+                "text": "who are you"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "I am Gemini, a large language model, trained by Google. I am here to help you generate job descriptions.",
+                "thought_signature": "CtUCAY89a18Yc5pOGacnCp5Hw-MnniyAPB1pahCzlSl_7R4Y-00l3P_tmSgQq1KtRQyXaR9EKmTLYmC5F19onapXOMGIwlCQDTYFM0ybr7K7mWpiO8vFnS0AwmlwZdyjDketUdEdwSA-d7b8FKRVKIs0FV8MJ_0ptPStUJmLaiilNnfh7bXZ3jj78M4gC5Ots4MRpwk6C0tMNslS_ApI6iCBl0v8PPI69_S8R9Kk5Qm8F0IDRo3O4uqK4hG-CbhTh5wnNKlfJLVmr-gcd3tbnvYKk8qo71dNuAHwx4fQgycLd8kinlTSJBphRIxtktI392zOQglHh6v1i46JorMvxKrwSGSk25kmAYwUL6sWWegxSnQskegFR2Fc7TGROMY1lSb77Y3Opnw4DMrisw-iEOhy0keSj7iX0BJhGhj0uSdVDdaNC4fJ47gqoVOljGyhVDpIDc91AS0="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1771842878.955389
+        },
+        {
+          "invocation_id": "e-05c893c6-7b49-485a-a8b2-e02e230391e8",
+          "user_content": {
+            "parts": [
+              {
+                "text": "who is an HR in an organization"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                "thought_signature": "CtACAY89a1-xqE0i5mg4dT8w-gW1_9rKaMRhNmjqL2Pv5drEQCzX9soaQ7WsQfOqyzpZLNUOqQwv1KX_JB6oZXF4-NbzW-PqyAOpBQJRpYQsvyDTLy3ongSU3gQCFUDAyTsDb6c21G8ZoACcNkyCtAi1fCA62SVApeVZn0YadBy0-TM9WgexzYcjUCN7MwaGeFQJvBhXddGKTkPO959NMHbHcAdxn7CbbWLz4KmrL6IKkdxTEZ2n3E_t1Phb-lEZ9AMv8TCalf2IiA_E7UfLoJXmapnUF8Uk5CZRvBNPotu_cjVdTVZ3G7RLa64ej2PGb2YhsbBWKB8H1-uwAtMIiiY3OLe-NDBo8LNjKYu9pvY0X78ialjEc9M5zUCFWqSNOAeI7tTuc2YBwjfDYUKwuYhrD6koblJLwbzYh1mXJPJ0sLJU6yd30ffw11F_5g9Few9L"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1771842913.270768
+        },
+        {
+          "invocation_id": "e-8f348895-8ce6-447d-81bd-c224eb5a1162",
+          "user_content": {
+            "parts": [
+              {
+                "text": "2+2=?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                "thought_signature": "CtECAY89a196nqEVB22nUrurgDYrY0imTBWYRo7IZspZ1qsnQ9mNcyS1QlFc7BcJIPHPdCP0Y2q4JEPTgtOBY9fUUGMQ4mKlA6GV7ElRtYbgd-4g9U-o6zv5Wj8vSrUAXbjKOSp_XNG2yLOTAtD4aCBpnf81R-wAr9dPYKHYgwr3fGlEfPO0uyBKoZXiROFKkFzzvLNH85foRBP9UtHGs-D-Sex3hI8lNy08BFCbVgE84B_EUaY9pHtpgGFoirRcP4rxNf9i5wEBWCYH99mwUF2_tmQRAYT2X7rTgpgxMn0hQUpIvYZRPTpP807eI3_bdD-zj4sJ5o7RNk291INPO3cw43f1wFQSiZHz2g-pxYx7ZUaPhjgW3xbPzlGGvWRWIggVXLgLMuFgKpEfu2rFeSC15GLbv9WCfyLjj5tAe6LSSR1GoJ6Q3pj_5vvT28MlzkZgbg=="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1771842929.283828
+        },
+        {
+          "invocation_id": "e-4c350fdf-efb1-4536-a986-88233e02f5ed",
+          "user_content": {
+            "parts": [
+              {
+                "text": "who is owner of microsoft"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                "thought_signature": "CrMCAY89a18eE1e0Flha9mp6KwCgv_sJf0BCvsFW7ZUttPkZ_ucApc4MDRgQqkyYHPxB-03oXDAJ-ZI7JRabsQAW4dwRLWzXkKSas7o5K6Clg7FlUGcpwUUG7lu7JrKx7iKN6D9bNihtxdqKx9GfRZSuxp_xFFK4AO58-GOupYaud7HQix-1OLa61F0EF9Z9w4UQrR1DiGoT54usRmVhHNmZcoi48bJCiniVChdavq5gIgZN2UfYvbuuz7EH2m4aWIQsS5vcOsz9dyn_no8GKKNMEFJt__MozgxMRDO00rA3NIzK4IX5KyTQ6THLvUk_NrRJKZEhUz3y_JKNk2vkk0yebNUxeCjqbUg6gpouIAS2aysUGCKm4diLU77Kwxw9y2KP-3oqRvQDEIIPCXm37nBqiGTy_g=="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1771842951.683507
+        }
+      ],
+      "session_input": {
+        "app_name": "root_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1771853621.4974582
+    }
+  ],
+  "creation_timestamp": 1771853615.4587057
+}

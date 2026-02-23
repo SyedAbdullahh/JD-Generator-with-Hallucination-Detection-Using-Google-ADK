@@ -1,0 +1,1546 @@
+{
+  "eval_set_result_id": "root_agent_scope_test_1771853645.891863",
+  "eval_set_result_name": "root_agent_scope_test_1771853645.891863",
+  "eval_set_id": "scope_test",
+  "eval_case_results": [
+    {
+      "eval_set_file": "scope_test",
+      "eval_set_id": "scope_test",
+      "eval_id": "case5af728",
+      "final_eval_status": 1,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 1.0,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.8,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 0.9357142857142857,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-3d79d95d-164b-4703-a71a-51a52686db58",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "who are you",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I am Gemini, a large language model, trained by Google. How can I help you today?",
+                  "thought": null,
+                  "thought_signature": "Cp8CAY89a18WV5xkrDa56B8d9EoPY7fXBtrc6YZZvdUF9LRwa5NQkNrUAhO9MjJ6n68NKUM6ozahiTNWjEsJOvad4ywFrJ4vjWhWzM1Y6_EOdRYdCt4wZjGojLr1yiYg9WdsA6zxpW9cV8sI5OlxuyewaPx-NBGf6Up3mNDMxsPGCIKcTGGyjXRIvUIBqy-oNKoOv9duO9tntAuSvqit3OhCS5WCzK3k6Bd_OgY5whsNS-zED_HLVtfgbB0XgB3z_zm10t7nviJwKQ9lRjjXpbAJrhVCGVAmiXxkj7T7Zbpb8FwEQsv6Me2i97EHgF7T1rp_YsM5x0Uyw4qTiPv3iplGmwSJtMT8713f94jtTj2DpzhfCv1VjmsuaNpl-VWQN-0=",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": []
+            },
+            "creation_timestamp": 1771853636.266282,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "root_agent": {
+                  "name": "root_agent",
+                  "instructions": "You are a helpful assistant that helps users generate job descriptions for various roles. You have access to a manager agent that can generate job descriptions and refines it. You have to decide when to call the manager agent based on the user query. If user is not asking for a job description, you should not call the manager agent and instead respond to the user query directly. If user is asking for a job description, you should call the manager agent to generate the job description.\n\nClassify the user query first,\n1. If its greetings or anything about JD generation process: ANSWER.\n2. VERY IMPORTANT:If its a query to generate JD and if any of Details Position Name, Company Name and Location are missing, ask questions before Proceeding with sub agent i.e manager_agent.\n3. If its a query to generate JD and Details collected so far about JD are enough, PROCEED with sub agent i.e manager_agent.\n4. If its not relevant to our Scope, POLITELY SAY: \"Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.\"\n\nYou are NOT Supposed to respond to any query out of Scope(irrelevant queries can be of any type except greetings and jd generation query). Politely say: \"Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role\"\n\nYou are an agent. Your internal name is \"root_agent\".\n\n\nYou have a list of other agents to transfer to:\n\n\nAgent name: manager_agent\nAgent description: \n\n\nIf you are the best to answer the question according to your description,\nyou can answer it.\n\nIf another agent is better for answering the question according to its\ndescription, call `transfer_to_agent` function to transfer the question to that\nagent. When transferring, do not generate any text other than the function\ncall.\n\n**NOTE**: the only available agents for `transfer_to_agent` function are\n`manager_agent`.\n",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Transfer the question to another agent.\n\n  This tool hands off control to another agent when it's more suitable to\n  answer the user's question according to the agent's description.\n\n  Note:\n    For most use cases, you should use TransferToAgentTool instead of this\n    function directly. TransferToAgentTool provides additional enum constraints\n    that prevent LLMs from hallucinating invalid agent names.\n\n  Args:\n    agent_name: the agent name to transfer to.\n  ",
+                          "name": "transfer_to_agent",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "agent_name": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": [
+                                  "manager_agent"
+                                ],
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "agent_name"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": "NULL"
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search": null,
+                      "google_search_retrieval": null,
+                      "url_context": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "e-2fad4655-071b-48e8-a346-c9efb5a1d9e1",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "who are you",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I am Gemini, a large language model, trained by Google. I am here to help you generate job descriptions.",
+                  "thought": null,
+                  "thought_signature": "CtUCAY89a18Yc5pOGacnCp5Hw-MnniyAPB1pahCzlSl_7R4Y-00l3P_tmSgQq1KtRQyXaR9EKmTLYmC5F19onapXOMGIwlCQDTYFM0ybr7K7mWpiO8vFnS0AwmlwZdyjDketUdEdwSA-d7b8FKRVKIs0FV8MJ_0ptPStUJmLaiilNnfh7bXZ3jj78M4gC5Ots4MRpwk6C0tMNslS_ApI6iCBl0v8PPI69_S8R9Kk5Qm8F0IDRo3O4uqK4hG-CbhTh5wnNKlfJLVmr-gcd3tbnvYKk8qo71dNuAHwx4fQgycLd8kinlTSJBphRIxtktI392zOQglHh6v1i46JorMvxKrwSGSk25kmAYwUL6sWWegxSnQskegFR2Fc7TGROMY1lSb77Y3Opnw4DMrisw-iEOhy0keSj7iX0BJhGhj0uSdVDdaNC4fJ47gqoVOljGyhVDpIDc91AS0=",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 1771842878.955389,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 1.0,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.8,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 0.742857142857143,
+              "eval_status": 2,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        },
+        {
+          "actual_invocation": {
+            "invocation_id": "e-539ac17e-9be5-47e9-86e3-b874745788a1",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "who is an HR in an organization",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                  "thought": null,
+                  "thought_signature": "Cq8DAY89a1-jvnIYUKEU4wEJuQB99PZtyshJq_GvHNAyuBnRCKATdSwt6kfebkiE_PLQb9xIMsdiFqlNvdykxBJzz3WOKOlw-AErFm409YAAKy1fhEcgBO0VWD3-JR50kyXivp3ztqfjRsquYBmIpZ358njM7ou13Id-Zwo2HBOzFDQ36lab3piGtzqhICmG-dL3qiqwVHx9BZiAiM9pLsqA14PPIEI_4NgmVZNkJRTbLCpHeSQ4-aSJ_xP3XTZDYupaEC-Fpy-Nts5_DYOMEgWkxYDc1ccZDLZLCK5XjLEsMGTIW8_ic54pbVOUC3k9lR3YZdBWhqqPHXXOx5UO-MTT4OQE3YmYGQgt8o3dRCBpbSjvqe7dpGtvxx8hs6L_dIGM2gmBCacH6VF30QrBR70Vjo61O2JZh0L6agjDHs6cyNqDNEv8FqvuS66pOUYta5xnzC6fCuAHwuZrLbFL4FOsGMESc0b3VpK_yvTCQtAiUQccKvsP13MRuQ4ZEan7st201lr3u18Ca8qq1Tefm8xYelpr3a9YHDLlZbtnuXNG2UYv9jObFERrJzhoQxw2cqA=",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": []
+            },
+            "creation_timestamp": 1771853639.399437,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "root_agent": {
+                  "name": "root_agent",
+                  "instructions": "You are a helpful assistant that helps users generate job descriptions for various roles. You have access to a manager agent that can generate job descriptions and refines it. You have to decide when to call the manager agent based on the user query. If user is not asking for a job description, you should not call the manager agent and instead respond to the user query directly. If user is asking for a job description, you should call the manager agent to generate the job description.\n\nClassify the user query first,\n1. If its greetings or anything about JD generation process: ANSWER.\n2. VERY IMPORTANT:If its a query to generate JD and if any of Details Position Name, Company Name and Location are missing, ask questions before Proceeding with sub agent i.e manager_agent.\n3. If its a query to generate JD and Details collected so far about JD are enough, PROCEED with sub agent i.e manager_agent.\n4. If its not relevant to our Scope, POLITELY SAY: \"Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.\"\n\nYou are NOT Supposed to respond to any query out of Scope(irrelevant queries can be of any type except greetings and jd generation query). Politely say: \"Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role\"\n\nYou are an agent. Your internal name is \"root_agent\".\n\n\nYou have a list of other agents to transfer to:\n\n\nAgent name: manager_agent\nAgent description: \n\n\nIf you are the best to answer the question according to your description,\nyou can answer it.\n\nIf another agent is better for answering the question according to its\ndescription, call `transfer_to_agent` function to transfer the question to that\nagent. When transferring, do not generate any text other than the function\ncall.\n\n**NOTE**: the only available agents for `transfer_to_agent` function are\n`manager_agent`.\n",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Transfer the question to another agent.\n\n  This tool hands off control to another agent when it's more suitable to\n  answer the user's question according to the agent's description.\n\n  Note:\n    For most use cases, you should use TransferToAgentTool instead of this\n    function directly. TransferToAgentTool provides additional enum constraints\n    that prevent LLMs from hallucinating invalid agent names.\n\n  Args:\n    agent_name: the agent name to transfer to.\n  ",
+                          "name": "transfer_to_agent",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "agent_name": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": [
+                                  "manager_agent"
+                                ],
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "agent_name"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": "NULL"
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search": null,
+                      "google_search_retrieval": null,
+                      "url_context": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "e-05c893c6-7b49-485a-a8b2-e02e230391e8",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "who is an HR in an organization",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                  "thought": null,
+                  "thought_signature": "CtACAY89a1-xqE0i5mg4dT8w-gW1_9rKaMRhNmjqL2Pv5drEQCzX9soaQ7WsQfOqyzpZLNUOqQwv1KX_JB6oZXF4-NbzW-PqyAOpBQJRpYQsvyDTLy3ongSU3gQCFUDAyTsDb6c21G8ZoACcNkyCtAi1fCA62SVApeVZn0YadBy0-TM9WgexzYcjUCN7MwaGeFQJvBhXddGKTkPO959NMHbHcAdxn7CbbWLz4KmrL6IKkdxTEZ2n3E_t1Phb-lEZ9AMv8TCalf2IiA_E7UfLoJXmapnUF8Uk5CZRvBNPotu_cjVdTVZ3G7RLa64ej2PGb2YhsbBWKB8H1-uwAtMIiiY3OLe-NDBo8LNjKYu9pvY0X78ialjEc9M5zUCFWqSNOAeI7tTuc2YBwjfDYUKwuYhrD6koblJLwbzYh1mXJPJ0sLJU6yd30ffw11F_5g9Few9L",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 1771842913.270768,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 1.0,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.8,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        },
+        {
+          "actual_invocation": {
+            "invocation_id": "e-937465f2-8142-4a24-8d08-945c8f094da2",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "2+2=?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                  "thought": null,
+                  "thought_signature": "CokDAY89a18N4phbQmX6Qxp8IENnpzdFEcpIbyPLkvNImN2JWSkkNcUZviTowK9_lC1nXToSWpl2cj3RS86FnlrkjfSK7I1WE-OXgo_d9hP6Q9a1X1S3LWreq9V7397kHlCc8HO85tPFIQzMoFKuXI5FCxbEQ72S_Aj8rfrzXWxRMiY3Th-96IJWpma_uc6ASfz9DvaRMfGN0h8K1tUtSIxDvgxgvR7DL0ERtXOuNZ-KLreK6QlhCGLR0tAN38IdsJd-j1OjQ9g3AiVscoIdae9Thvrn8iAbT46bMykrNPGepNU4b-zS0zP26a0a7nbNhzLoLWE2Q5l4ztCYvGlWjQc_Kb3zsM0au3XxjontEqobyBLH9YYGtBAHLL1gmuc8A4HPeeyf3kvIKUoQQI2ekzJxfnAsnEevJU1_-z85DgedJ1I3HKNhziQ0Zvm6We0umu-S-m1_LucQQC3rqFEwc4qzsPyP9RqH1Ge-BMKp0VzYUkm_iOnP-kG74IAH_3KA7vryD3nI50dnxOfI",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": []
+            },
+            "creation_timestamp": 1771853642.744343,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "root_agent": {
+                  "name": "root_agent",
+                  "instructions": "You are a helpful assistant that helps users generate job descriptions for various roles. You have access to a manager agent that can generate job descriptions and refines it. You have to decide when to call the manager agent based on the user query. If user is not asking for a job description, you should not call the manager agent and instead respond to the user query directly. If user is asking for a job description, you should call the manager agent to generate the job description.\n\nClassify the user query first,\n1. If its greetings or anything about JD generation process: ANSWER.\n2. VERY IMPORTANT:If its a query to generate JD and if any of Details Position Name, Company Name and Location are missing, ask questions before Proceeding with sub agent i.e manager_agent.\n3. If its a query to generate JD and Details collected so far about JD are enough, PROCEED with sub agent i.e manager_agent.\n4. If its not relevant to our Scope, POLITELY SAY: \"Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.\"\n\nYou are NOT Supposed to respond to any query out of Scope(irrelevant queries can be of any type except greetings and jd generation query). Politely say: \"Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role\"\n\nYou are an agent. Your internal name is \"root_agent\".\n\n\nYou have a list of other agents to transfer to:\n\n\nAgent name: manager_agent\nAgent description: \n\n\nIf you are the best to answer the question according to your description,\nyou can answer it.\n\nIf another agent is better for answering the question according to its\ndescription, call `transfer_to_agent` function to transfer the question to that\nagent. When transferring, do not generate any text other than the function\ncall.\n\n**NOTE**: the only available agents for `transfer_to_agent` function are\n`manager_agent`.\n",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Transfer the question to another agent.\n\n  This tool hands off control to another agent when it's more suitable to\n  answer the user's question according to the agent's description.\n\n  Note:\n    For most use cases, you should use TransferToAgentTool instead of this\n    function directly. TransferToAgentTool provides additional enum constraints\n    that prevent LLMs from hallucinating invalid agent names.\n\n  Args:\n    agent_name: the agent name to transfer to.\n  ",
+                          "name": "transfer_to_agent",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "agent_name": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": [
+                                  "manager_agent"
+                                ],
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "agent_name"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": "NULL"
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search": null,
+                      "google_search_retrieval": null,
+                      "url_context": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "e-8f348895-8ce6-447d-81bd-c224eb5a1162",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "2+2=?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                  "thought": null,
+                  "thought_signature": "CtECAY89a196nqEVB22nUrurgDYrY0imTBWYRo7IZspZ1qsnQ9mNcyS1QlFc7BcJIPHPdCP0Y2q4JEPTgtOBY9fUUGMQ4mKlA6GV7ElRtYbgd-4g9U-o6zv5Wj8vSrUAXbjKOSp_XNG2yLOTAtD4aCBpnf81R-wAr9dPYKHYgwr3fGlEfPO0uyBKoZXiROFKkFzzvLNH85foRBP9UtHGs-D-Sex3hI8lNy08BFCbVgE84B_EUaY9pHtpgGFoirRcP4rxNf9i5wEBWCYH99mwUF2_tmQRAYT2X7rTgpgxMn0hQUpIvYZRPTpP807eI3_bdD-zj4sJ5o7RNk291INPO3cw43f1wFQSiZHz2g-pxYx7ZUaPhjgW3xbPzlGGvWRWIggVXLgLMuFgKpEfu2rFeSC15GLbv9WCfyLjj5tAe6LSSR1GoJ6Q3pj_5vvT28MlzkZgbg==",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 1771842929.283828,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 1.0,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.8,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        },
+        {
+          "actual_invocation": {
+            "invocation_id": "e-3831b921-8915-488d-b531-b0067b08ea9c",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "who is owner of microsoft",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                  "thought": null,
+                  "thought_signature": "CvYBAY89a18y0igr6pUVPXV5kAwcsMqD9EyGpK3JjEhAderb-m1VR4eLaIxr1h8sDx0FInOw4VrxUDC0cCeayQLPXrM_rvwWSoBl-BWmBquzzw8s4NPMw4lLKpjmlxlMSZ1dXNEJLUNPSv2NquGD6fgU4fgrXA6CTdL1TTxhDj9zhcFUlAPgDju8IgVWcbs-E8efMsFuLaWEk31bvj0AtHKgcxNhbyZyqTsRFp6KrPnOh8Ppjo0zVLdwmVFN8BSsKrTWbfwIxod-M-wblPlaFWWIP5jSUQkdmcgckpjQlAe51GKrkL1uNxsuh7Pl1Zlx9OGJ8PDqm_iT",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": []
+            },
+            "creation_timestamp": 1771853645.876346,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "root_agent": {
+                  "name": "root_agent",
+                  "instructions": "You are a helpful assistant that helps users generate job descriptions for various roles. You have access to a manager agent that can generate job descriptions and refines it. You have to decide when to call the manager agent based on the user query. If user is not asking for a job description, you should not call the manager agent and instead respond to the user query directly. If user is asking for a job description, you should call the manager agent to generate the job description.\n\nClassify the user query first,\n1. If its greetings or anything about JD generation process: ANSWER.\n2. VERY IMPORTANT:If its a query to generate JD and if any of Details Position Name, Company Name and Location are missing, ask questions before Proceeding with sub agent i.e manager_agent.\n3. If its a query to generate JD and Details collected so far about JD are enough, PROCEED with sub agent i.e manager_agent.\n4. If its not relevant to our Scope, POLITELY SAY: \"Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.\"\n\nYou are NOT Supposed to respond to any query out of Scope(irrelevant queries can be of any type except greetings and jd generation query). Politely say: \"Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role\"\n\nYou are an agent. Your internal name is \"root_agent\".\n\n\nYou have a list of other agents to transfer to:\n\n\nAgent name: manager_agent\nAgent description: \n\n\nIf you are the best to answer the question according to your description,\nyou can answer it.\n\nIf another agent is better for answering the question according to its\ndescription, call `transfer_to_agent` function to transfer the question to that\nagent. When transferring, do not generate any text other than the function\ncall.\n\n**NOTE**: the only available agents for `transfer_to_agent` function are\n`manager_agent`.\n",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Transfer the question to another agent.\n\n  This tool hands off control to another agent when it's more suitable to\n  answer the user's question according to the agent's description.\n\n  Note:\n    For most use cases, you should use TransferToAgentTool instead of this\n    function directly. TransferToAgentTool provides additional enum constraints\n    that prevent LLMs from hallucinating invalid agent names.\n\n  Args:\n    agent_name: the agent name to transfer to.\n  ",
+                          "name": "transfer_to_agent",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "agent_name": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": [
+                                  "manager_agent"
+                                ],
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "agent_name"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": "NULL"
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search": null,
+                      "google_search_retrieval": null,
+                      "url_context": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "e-4c350fdf-efb1-4536-a986-88233e02f5ed",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "who is owner of microsoft",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                  "thought": null,
+                  "thought_signature": "CrMCAY89a18eE1e0Flha9mp6KwCgv_sJf0BCvsFW7ZUttPkZ_ucApc4MDRgQqkyYHPxB-03oXDAJ-ZI7JRabsQAW4dwRLWzXkKSas7o5K6Clg7FlUGcpwUUG7lu7JrKx7iKN6D9bNihtxdqKx9GfRZSuxp_xFFK4AO58-GOupYaud7HQix-1OLa61F0EF9Z9w4UQrR1DiGoT54usRmVhHNmZcoi48bJCiniVChdavq5gIgZN2UfYvbuuz7EH2m4aWIQsS5vcOsz9dyn_no8GKKNMEFJt__MozgxMRDO00rA3NIzK4IX5KyTQ6THLvUk_NrRJKZEhUz3y_JKNk2vkk0yebNUxeCjqbUg6gpouIAS2aysUGCKm4diLU77Kwxw9y2KP-3oqRvQDEIIPCXm37nBqiGTy_g==",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 1771842951.683507,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 1.0,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.8,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___1b083c59-6c04-43af-89bb-661369a1e2ce",
+      "session_details": {
+        "id": "___eval___session___1b083c59-6c04-43af-89bb-661369a1e2ce",
+        "app_name": "root_agent",
+        "user_id": "user",
+        "state": {
+          "__llm_request_key__": "88184480-d278-4a9a-853f-10039854d951"
+        },
+        "events": [
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "who are you",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3d79d95d-164b-4703-a71a-51a52686db58",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "037cf060-a660-4af5-8616-18cd18a02866",
+            "timestamp": 1771853632.877541
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I am Gemini, a large language model, trained by Google. How can I help you today?",
+                  "thought": null,
+                  "thought_signature": "Cp8CAY89a18WV5xkrDa56B8d9EoPY7fXBtrc6YZZvdUF9LRwa5NQkNrUAhO9MjJ6n68NKUM6ozahiTNWjEsJOvad4ywFrJ4vjWhWzM1Y6_EOdRYdCt4wZjGojLr1yiYg9WdsA6zxpW9cV8sI5OlxuyewaPx-NBGf6Up3mNDMxsPGCIKcTGGyjXRIvUIBqy-oNKoOv9duO9tntAuSvqit3OhCS5WCzK3k6Bd_OgY5whsNS-zED_HLVtfgbB0XgB3z_zm10t7nviJwKQ9lRjjXpbAJrhVCGVAmiXxkj7T7Zbpb8FwEQsv6Me2i97EHgF7T1rp_YsM5x0Uyw4qTiPv3iplGmwSJtMT8713f94jtTj2DpzhfCv1VjmsuaNpl-VWQN-0=",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "ec76c783-1072-48a0-8416-cd09fc86392a"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 20,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 20
+                }
+              ],
+              "prompt_token_count": 560,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 560
+                }
+              ],
+              "thoughts_token_count": 54,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 634,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": -0.9239380836486817,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3d79d95d-164b-4703-a71a-51a52686db58",
+            "author": "root_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "ec76c783-1072-48a0-8416-cd09fc86392a"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "51e5a9e6-07c1-4a22-b540-24310e425715",
+            "timestamp": 1771853632.881782
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "who is an HR in an organization",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-539ac17e-9be5-47e9-86e3-b874745788a1",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "795c12f6-5d4b-46ba-b129-856310b0d341",
+            "timestamp": 1771853636.272351
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                  "thought": null,
+                  "thought_signature": "Cq8DAY89a1-jvnIYUKEU4wEJuQB99PZtyshJq_GvHNAyuBnRCKATdSwt6kfebkiE_PLQb9xIMsdiFqlNvdykxBJzz3WOKOlw-AErFm409YAAKy1fhEcgBO0VWD3-JR50kyXivp3ztqfjRsquYBmIpZ358njM7ou13Id-Zwo2HBOzFDQ36lab3piGtzqhICmG-dL3qiqwVHx9BZiAiM9pLsqA14PPIEI_4NgmVZNkJRTbLCpHeSQ4-aSJ_xP3XTZDYupaEC-Fpy-Nts5_DYOMEgWkxYDc1ccZDLZLCK5XjLEsMGTIW8_ic54pbVOUC3k9lR3YZdBWhqqPHXXOx5UO-MTT4OQE3YmYGQgt8o3dRCBpbSjvqe7dpGtvxx8hs6L_dIGM2gmBCacH6VF30QrBR70Vjo61O2JZh0L6agjDHs6cyNqDNEv8FqvuS66pOUYta5xnzC6fCuAHwuZrLbFL4FOsGMESc0b3VpK_yvTCQtAiUQccKvsP13MRuQ4ZEan7st201lr3u18Ca8qq1Tefm8xYelpr3a9YHDLlZbtnuXNG2UYv9jObFERrJzhoQxw2cqA=",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "dcf517c9-ac99-4653-b425-8985affe4028"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 28,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 28
+                }
+              ],
+              "prompt_token_count": 641,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 641
+                }
+              ],
+              "thoughts_token_count": 82,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 751,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": -0.5418853759765625,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-539ac17e-9be5-47e9-86e3-b874745788a1",
+            "author": "root_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "dcf517c9-ac99-4653-b425-8985affe4028"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "1af006dd-7593-403d-a911-43fa4e511059",
+            "timestamp": 1771853636.277167
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "2+2=?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-937465f2-8142-4a24-8d08-945c8f094da2",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "9fd576d5-1c93-4ac6-bd25-cc023c2db3b6",
+            "timestamp": 1771853639.405427
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                  "thought": null,
+                  "thought_signature": "CokDAY89a18N4phbQmX6Qxp8IENnpzdFEcpIbyPLkvNImN2JWSkkNcUZviTowK9_lC1nXToSWpl2cj3RS86FnlrkjfSK7I1WE-OXgo_d9hP6Q9a1X1S3LWreq9V7397kHlCc8HO85tPFIQzMoFKuXI5FCxbEQ72S_Aj8rfrzXWxRMiY3Th-96IJWpma_uc6ASfz9DvaRMfGN0h8K1tUtSIxDvgxgvR7DL0ERtXOuNZ-KLreK6QlhCGLR0tAN38IdsJd-j1OjQ9g3AiVscoIdae9Thvrn8iAbT46bMykrNPGepNU4b-zS0zP26a0a7nbNhzLoLWE2Q5l4ztCYvGlWjQc_Kb3zsM0au3XxjontEqobyBLH9YYGtBAHLL1gmuc8A4HPeeyf3kvIKUoQQI2ekzJxfnAsnEevJU1_-z85DgedJ1I3HKNhziQ0Zvm6We0umu-S-m1_LucQQC3rqFEwc4qzsPyP9RqH1Ge-BMKp0VzYUkm_iOnP-kG74IAH_3KA7vryD3nI50dnxOfI",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "f03c6864-f7d9-4252-ade8-5c81e358388b"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 28,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 28
+                }
+              ],
+              "prompt_token_count": 755,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 755
+                }
+              ],
+              "thoughts_token_count": 78,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 861,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": -0.142932619367327,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-937465f2-8142-4a24-8d08-945c8f094da2",
+            "author": "root_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "f03c6864-f7d9-4252-ade8-5c81e358388b"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "2436c342-e26e-4973-9991-286412c3cc3d",
+            "timestamp": 1771853639.409665
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "who is owner of microsoft",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3831b921-8915-488d-b531-b0067b08ea9c",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "6c9ebea0-8de4-439f-a7f2-80bb661ada80",
+            "timestamp": 1771853642.749627
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Sorry I cannot answer this. This is out of my scope. Let me know if you need me to generate any JD for any role.",
+                  "thought": null,
+                  "thought_signature": "CvYBAY89a18y0igr6pUVPXV5kAwcsMqD9EyGpK3JjEhAderb-m1VR4eLaIxr1h8sDx0FInOw4VrxUDC0cCeayQLPXrM_rvwWSoBl-BWmBquzzw8s4NPMw4lLKpjmlxlMSZ1dXNEJLUNPSv2NquGD6fgU4fgrXA6CTdL1TTxhDj9zhcFUlAPgDju8IgVWcbs-E8efMsFuLaWEk31bvj0AtHKgcxNhbyZyqTsRFp6KrPnOh8Ppjo0zVLdwmVFN8BSsKrTWbfwIxod-M-wblPlaFWWIP5jSUQkdmcgckpjQlAe51GKrkL1uNxsuh7Pl1Zlx9OGJ8PDqm_iT",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "88184480-d278-4a9a-853f-10039854d951"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 28,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 28
+                }
+              ],
+              "prompt_token_count": 866,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 866
+                }
+              ],
+              "thoughts_token_count": 42,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 936,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": -0.30137433324541363,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3831b921-8915-488d-b531-b0067b08ea9c",
+            "author": "root_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "88184480-d278-4a9a-853f-10039854d951"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "67458b2c-6f56-46ff-92e3-0ffabca13ab6",
+            "timestamp": 1771853642.754511
+          }
+        ],
+        "last_update_time": 1771853642.754511
+      },
+      "user_id": "user"
+    }
+  ],
+  "creation_timestamp": 1771853645.891863
+}
